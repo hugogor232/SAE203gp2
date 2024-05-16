@@ -77,7 +77,7 @@ function genererHeader()
                                     <label class="form-check-label" for="showPassword">Afficher le mot de passe</label>
                                 </div>
                                     <button type="submit" class="btn btn-primary">Se connecter</button>
-                                    <a href="index.php" class="btn btn-secondary">Revenir à la page d'accueil</a>
+                                    <a href="index.php" class="btn btn-secondary">Revenir a la page d accueil>
                             </form>
                         </div>
                     </div>

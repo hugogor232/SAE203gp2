@@ -15,7 +15,6 @@
 <body>
 
     <?php
-    session_start();
     include ('functions.php');
     genererHeader();
     ?>
