@@ -64,20 +64,20 @@ function genererHeader()
                             </div>
                             <h2>Modifier votre profil</h2>
                             <form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Nouvel email :</label>
-                                    <input type="email" class="form-control" id="email" name="email" value="' . htmlspecialchars($email) . '" required>
+                                <div class="form-group">
+                                    <label for="email">e-mail :</label>
+                                    <input type="text" class="form-control" id="email" name="email" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="vehicle" class="form-label">Nouveau véhicule :</label>
-                                    <input type="text" class="form-control" id="vehicle" name="vehicle" value="' . htmlspecialchars($vehicle) . '" required>
+                                <div class="form-group">
+                                    <label for="password">Mot de passe :</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Nouveau mot de passe (laissez vide pour ne pas changer) :</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="showPassword">
+                                    <label class="form-check-label" for="showPassword">Afficher le mot de passe</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary me-2">Modifier</button>
-                                <a href="logout.php" class="btn btn-danger">Se déconnecter</a>
+                                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                                    <a href="index.php" class="btn btn-secondary">Revenir à la page d'accueil</a>
                             </form>
                         </div>
                     </div>
