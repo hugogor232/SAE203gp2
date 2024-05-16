@@ -7,16 +7,9 @@
     <?php include 'functions.php';?>
 </head>
 <body>
-    <?php navbar(); ?>
+    <?php navbar(); list_file(1);?>
     <div class="container-fluid">
-    <table class="table table-striped table-hover">
-        <tr>
-            <th scope="col">Nom</th>
-            <th>Envoyé le</th>
-            <th>Envoyé par</th>
-        </tr>
-        <tr></tr>
-    </table>
+    <?php affiche(12); ?>
     </div>
 </body>
 </html>

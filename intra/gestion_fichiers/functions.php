@@ -19,6 +19,46 @@ function navbar(){
   </div>
 	<?php
 } 
+
+function list_file($id){
+  $list =[] ;
+  if ($handle = opendir('../espace_fichiers/groupes/' . (string) $id)) {
+    /* Ceci est la façon correcte de traverser un dossier. */
+    while (false !== ($entry = readdir($handle))) {
+      if ($entry != "." && $entry != "..") {
+      $list[] = $entry;
+      return $list;
+      }
+    }
+  }
+}
+
+function affiche($id){
+  $path = "../espace_fichiers/groupes";
+  $fichiers = json_decode(file_get_contents("data/fichiers.json"));?>
+  <table class="table table-striped table-hover">
+      <tr>
+          <td>Nom</td>
+          <td>Envoyé le</td>
+          <td>Envoyé par</td>
+      </tr>
+  <?php
+      $path_file = $path . "/" . (string) $fichier -> id;
+      $files = list_file(1);
+      foreach ($files as $file){
+        echo $path_file ."/" . $file;
+      ?>
+      <tr>
+        <td><a href="<?=$path_file ."1/" . $file ?>"> <?= $file; ?> </td>
+        <td>12/05/2024</td>
+        <td>Solaymane</td>
+      </tr>
+      <?php 
+    }
+  }
+  ?> 
+  </table>
+  <?php
 ?>
 </body>
 </html>
