@@ -58,27 +58,23 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Création de dossier</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-        <form>
+        <form action="traitgrp.php" method='post'>
         <div class="form-group">
-          <label for="exampleInputEmail1">Name</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom du fichier">
+          <label >Name</label>
+          <input name="nom" type="text" class="form-control" id="Name" placeholder="Nom du fichier">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Description</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Desciption">
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <label >Description</label>
+          <input name="descr" type="text" class="form-control" id="Description" placeholder="Desciption">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        </form>
         </div>
         
         <!-- Modal footer -->

@@ -1,12 +1,37 @@
 [
     {
-        "id":1,
+        "id": 1,
         "nom": "groupe 1",
         "description": "voici la description du groupe 1"
     },
     {
-        "id":2,
-        "nom": "groupe 2",
-        "description": "voici la description du groupe 2"
+        "id": 1,
+        "nom": "groupe 1",
+        "description": "voici la description du groupe 1"
+    },
+    {
+        "id": 1,
+        "nom": "groupe 1",
+        "description": "voici la description du groupe 1"
+    },
+    {
+        "id": 1,
+        "nom": "zadazd",
+        "description": "azdaz"
+    },
+    {
+        "id": 1,
+        "nom": "zdaz",
+        "description": "azd"
+    },
+    {
+        "id": 1,
+        "nom": "azd",
+        "description": "azd"
+    },
+    {
+        "id": 1,
+        "nom": "davida",
+        "description": "zd"
     }
 ]
