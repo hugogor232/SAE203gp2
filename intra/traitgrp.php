@@ -1,5 +1,4 @@
 <?php 
-header("Location: groupes.php");
 session_start();
 $lecturejson = json_decode(file_get_contents('grp.json', true));
 print_r($_POST);

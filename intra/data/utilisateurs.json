@@ -1,115 +1,254 @@
-{
-    "0": {
-        "utilisateur": "admin",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "zoe",
-        "email": "admin@admin.com",
-        "role": "admin"
+[
+    {
+        "id":"0",
+        "prenom": "Sophie",
+        "nom": "Leclerc",
+        "password": "Sophie123",
+        "adresse": "15 Rue de la R\u00e9publique",
+        "email": "s.leclerc@example.com",
+        "telephone": "06.12.34.56.78",
+        "dob": "1985-02-14",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "1": {
-        "utilisateur": "user",
-        "motdepasse": "$2y$10$v9wf3uecFoNn34p8iMlN\/OOb8IsQrW4TCNOWt5OPdaqLPApP\/r00O",
-        "vehicule": "Audi",
-        "email": "user1@gamil.com",
-        "role": "user",
-        "avatar": ".\/avatars\/planet9_Wallpaper_5000x2813.jpg"
+    {
+        "id":"1",
+        "prenom": "Thomas",
+        "nom": "Dubois",
+        "password": "Dubois789",
+        "adresse": "8 Avenue Victor Hugo",
+        "email": "thomas_d@example.com",
+        "telephone": "01.23.45.67.89",
+        "dob": "1992-03-18",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "2": {
-        "utilisateur": "modo",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "dacia",
-        "email": "modo@modo.com",
-        "role": "modo"
+    {
+        "id":"2",
+        "prenom": "Marie",
+        "nom": "Lefevre",
+        "password": "MarieLef",
+        "adresse": "10 Rue des Lilas",
+        "email": "marie78@example.com",
+        "telephone": "06.98.76.54.32",
+        "dob": "1980-11-03",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "4": {
-        "utilisateur": "aucaijoir",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "citroen",
-        "email": "aucaijoir@aucaijoir.com",
-        "role": "user"
+    {
+        "id":"3",
+        "prenom": "Philippe",
+        "nom": "Rousseau",
+        "password": "PhilRouss",
+        "adresse": "4 Impasse des Cerisiers",
+        "email": "philippe_rousseau@example.com",
+        "telephone": "02.34.56.78.90",
+        "dob": "1976-04-22",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "5": {
-        "utilisateur": "qalaicou",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "citroen",
-        "email": "qalaicou@qalaicou.com",
-        "role": "user"
+    {
+        "id":"4",
+        "prenom": "Julie",
+        "nom": "Martin",
+        "password": "JulieM123",
+        "adresse": "22 Rue du Commerce",
+        "email": "julie.m@example.com",
+        "telephone": "07.65.43.21.09",
+        "dob": "1991-09-09",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "6": {
-        "utilisateur": "mopovaf",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "bmw",
-        "email": "mopovaf@mopovaf.com",
-        "role": "user"
+    {
+        "id":"5",
+        "prenom": "Antoine",
+        "nom": "Dupont",
+        "password": "Antoine456",
+        "adresse": "5 Place de la Libert\u00e9",
+        "email": "antoine.dupont@example.com",
+        "telephone": "03.45.67.89.01",
+        "dob": "1988-08-07",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "7": {
-        "utilisateur": "moiqauzi",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "bmw",
-        "email": "moiqauzi@moiqauzi.com",
-        "role": "user"
+    {
+        "id":"6",
+        "prenom": "Val\u00e9rie",
+        "nom": "Girard",
+        "password": "ValGirard2",
+        "adresse": "12 Avenue des Roses",
+        "email": "val_g@example.com",
+        "telephone": "04.56.78.90.12",
+        "dob": "1975-01-16",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "8": {
-        "utilisateur": "odeuvoipoif",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "lada",
-        "email": "odeuvoipoif@odeuvoipoif.com",
-        "role": "user"
+    {
+        "id":"7",
+        "prenom": "Nicolas",
+        "nom": "Bertrand",
+        "password": "NicoBer",
+        "adresse": "7 Rue du Ch\u00eane",
+        "email": "nicolasb@example.com",
+        "telephone": "06.78.90.12.34",
+        "dob": "1983-07-25",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "9": {
-        "utilisateur": "atoipeneu",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "ford",
-        "email": "atoipeneu@atoipeneu.com",
-        "role": "user"
+    {
+        "id":"8",
+        "prenom": "Sandrine",
+        "nom": "Leroy",
+        "password": "Sandrine67",
+        "adresse": "18 Rue des Violettes",
+        "email": "sandrine.leroy@example.com",
+        "telephone": "01.23.45.67.89",
+        "dob": "1977-12-12",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "10": {
-        "utilisateur": "noifaumau",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "ferrari",
-        "email": "noifaumau@noifaumau.com",
-        "role": "user"
+    {
+        "id":"9",
+        "prenom": "Guillaume",
+        "nom": "Moreau",
+        "password": "GuiMore",
+        "adresse": "9 Avenue du G\u00e9n\u00e9ral de Gaulle",
+        "email": "guillaume.m@example.com",
+        "telephone": "02.34.56.78.90",
+        "dob": "1981-05-30",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "11": {
-        "utilisateur": "neuhagal",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "lancia",
-        "email": "neuhagal@neuhagal.com",
-        "role": "user"
+    {
+        "id":"10",
+        "prenom": "Caroline",
+        "nom": "Fournier",
+        "password": "Caro1234",
+        "adresse": "3 Rue des Acacias",
+        "email": "caroline_f@example.com",
+        "telephone": "03.45.67.89.01",
+        "dob": "1984-10-08",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "12": {
-        "utilisateur": "beukaita",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "renault",
-        "email": "beukaita@beukaita.com",
-        "role": "user"
+    {
+        "id":"11",
+        "prenom": "David",
+        "nom": "Martinez",
+        "password": "DavidMtz",
+        "adresse": "6 Rue de la Paix",
+        "email": "david.martinez@example.com",
+        "telephone": "04.56.78.90.12",
+        "dob": "1974-02-20",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "13": {
-        "utilisateur": "rezetar",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "volkswagen",
-        "email": "rezetar@rezetar.com",
-        "role": "user"
+    {
+        "id":"12",
+        "prenom": "Christine",
+        "nom": "Garcia",
+        "password": "ChrisGarc",
+        "adresse": "11 Avenue Foch",
+        "email": "christine_g@example.com",
+        "telephone": "05.67.89.01.23",
+        "dob": "1972-06-15",
+        "role": "responssable",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "14": {
-        "utilisateur": "mimi",
-        "motdepasse": "$2y$10$RZQpzDCAMj5XBHGP5VJHB.jgPSnoebSBMxBa83hZ1.YL0tHzhsJQ.",
-        "vehicule": "honda",
-        "email": "mimimou@miaou.fr",
-        "role": "user"
+    {
+        "id":"13",
+        "prenom": "Pierre",
+        "nom": "Andr\u00e9",
+        "password": "PierreA567",
+        "adresse": "1 Rue de la Fontaine",
+        "email": "p.andre@example.com",
+        "telephone": "06.78.90.12.34",
+        "dob": "1986-11-05",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "16": {
-        "utilisateur": "User",
-        "motdepasse": "$2y$10$TiexHjVZtP8uH\/LD9oMiBewyjCWdC8DoZ5C3B0LLP.4DF1lX3Ras2",
-        "vehicule": "Renauld",
-        "email": "User@exemple.com",
-        "role": "user"
+    {
+        "id":"14",
+        "prenom": "Isabelle",
+        "nom": "Gauthier",
+        "password": "IsaGauth",
+        "adresse": "14 Avenue du Soleil",
+        "email": "isabelle.g@example.com",
+        "telephone": "07.89.01.23.45",
+        "dob": "1978-04-10",
+        "role": "rh",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "19": {
-        "utilisateur": "afrim",
-        "motdepasse": "$2y$10$tJ3OYqzKUtW..zYk4X0.R.RlHUjorBx4K9HUv8Q2Ubvj0Ho4mIiam",
-        "vehicule": "DumDum",
-        "email": "afrimperparimdefrim@gmail.com",
-        "role": "admin"
+    {
+        "id":"15",
+        "prenom": "Marc",
+        "nom": "Legrand",
+        "password": "MarcLeg",
+        "adresse": "2 Rue du Moulin",
+        "email": "m.legrand@example.com",
+        "telephone": "01.23.45.67.89",
+        "dob": "1980-03-25",
+        "role": "rh",
+        "image": "https://thispersondoesnotexist.com/"
+    },
+    {
+        "id":"16",
+        "prenom": "C\u00e9line",
+        "nom": "Renaud",
+        "password": "CelineR321",
+        "adresse": "13 Avenue des Cerisiers",
+        "email": "celine.renaud@example.com",
+        "telephone": "02.34.56.78.90",
+        "dob": "1982-08-18",
+        "role": "rh",
+        "image": "https://thispersondoesnotexist.com/"
+    },
+    {
+        "id":"17",
+        "prenom": "Jean",
+        "nom": "Jacques",
+        "password": "JeanJ456",
+        "adresse": "7 Rue des Moulins",
+        "email": "jjacques@example.com",
+        "telephone": "03.45.67.89.01",
+        "dob": "1976-01-09",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
+    },
+    {
+        "id":"18",
+        "prenom": "Nathalie",
+        "nom": "Mercier",
+        "password": "NathMerc",
+        "adresse": "16 Rue de la Libert\u00e9",
+        "email": "nathalie.mercier@example.com",
+        "telephone": "04.56.78.90.12",
+        "dob": "1979-09-14",
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
+    },
+    {
+        "id":"19",
+        "prenom": "Haziz",
+        "nom": "SHEHU",
+        "password": "h",
+        "adresse": "16 Rue de la Libert\u00e9",
+        "email": "haziz@gmail.com",
+        "telephone": "04.56.78.90.13",
+        "dob": "1979-09-14",
+        "role": "responssable",
+        "image": "https://thispersondoesnotexist.com/"
+    },
+    {
+        "id":"20",
+        "prenom": "User",
+        "nom": "USER",
+        "password": "$2y$10$KEm2KSAk87jXIctxWEemQu\/ugOZEF62eduw7WWBZI.d1ydkbO5R1.",
+        "adresse": "1 Boulevard de Luxembourg",
+        "email": "user@gmail.com",
+        "telephone": "04.56.78.90.13",
+        "dob": "2001-01-01",
+        "role": "responssable",
+        "image": "https://thispersondoesnotexist.com/"
     }
-}
+]

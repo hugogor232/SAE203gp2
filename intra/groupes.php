@@ -16,6 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   
     </head>
     <body>
@@ -73,6 +74,17 @@
           <label >Description</label>
           <input name="descr" type="text" class="form-control" id="Description" placeholder="Desciption">
         </div>
+      </label>
+      <br /><br />
+          <div  >
+          <h2 >Liste des employés</h2>  
+          <div >
+            <input onchange="test()" type="text" name="search" id="search" placeholder="Search Employee Details" class="form-control" />
+          </div>
+          <ul class="list-group" id="result"></ul>
+          <br />
+  <a id="change">yoooo</a>
+          </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         </div>
@@ -81,12 +93,37 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
+        </div>
         
       </div>
     </div>
   </div>
-  
-</div>
 
-    </body>
+</body>
+<script>
+
+$(document).ready(function(){
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+  $.getJSON('data/utilisateurs.json', function(data) {
+   $.each(data, function(key, value){
+    if (value.prenom.search(expression) != -1 || value.nom.search(expression) != -1)
+    {
+     $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.prenom+' '+value.nom+' | <span class="text-muted">'+value.role+' | '+value.id+'</span></li>');
+    }
+   });   
+  });
+ });
+ 
+ $('#result').on('click', 'li', function() {
+  var click_text = $(this).text().split('|');
+  $('#search').val($.trim(click_text[2]));
+  $("#result").html('');
+ });
+});
+</script>
 </html>
