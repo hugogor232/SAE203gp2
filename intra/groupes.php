@@ -100,30 +100,35 @@
   </div>
 
 </body>
-<script>
+<!-- Votre contenu HTML ici -->
 
-$(document).ready(function(){
- $.ajaxSetup({ cache: false });
- $('#search').keyup(function(){
-  $('#result').html('');
-  $('#state').val('');
-  var searchField = $('#search').val();
-  var expression = new RegExp(searchField, "i");
-  $.getJSON('data/utilisateurs.json', function(data) {
-   $.each(data, function(key, value){
-    if (value.prenom.search(expression) != -1 || value.nom.search(expression) != -1)
-    {
-     $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.prenom+' '+value.nom+' | <span class="text-muted">'+value.role+' | '+value.id+'</span></li>');
-    }
-   });   
-  });
- });
- 
- $('#result').on('click', 'li', function() {
-  var click_text = $(this).text().split('|');
-  $('#search').val($.trim(click_text[2]));
-  $("#result").html('');
- });
-});
-</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+        $('#search').keyup(function(){
+            $('#result').html('');
+            $('#state').val('');
+            var searchField = $('#search').val();
+            var expression = new RegExp(searchField, "i");
+            $.getJSON('data/utilisateurs.json', function(data) {
+                $.each(data, function(key, value){
+                    if (value.prenom.search(expression) != -1 || value.nom.search(expression) != -1)
+                    {
+                        $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.prenom+' '+value.nom+'</li>');
+                    }
+                });
+            });
+        });
+
+        let selectedUsers = [];
+
+        $('#result').on('click', 'li', function() {
+            var click_text = $(this).text().split('|');
+            selectedUsers.push($.trim(click_text[0]));
+            $('#search').val(selectedUsers.join(', '));
+            $('#result').html('');
+        });
+    });
+    </script>
 </html>
