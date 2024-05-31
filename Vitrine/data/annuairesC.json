@@ -1,0 +1,284 @@
+{
+  "clients": [
+    {
+      "nom": "Jean Dupont",
+      "adresse": "12 Rue de Paris, 75001 Paris, France",
+      "telephone": "+33 1 23 45 67 89",
+      "email": "jean.dupont@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/jean_dupont.pdf"
+    },
+    {
+      "nom": "Marie Martin",
+      "adresse": "45 Avenue de la République, 75011 Paris, France",
+      "telephone": "+33 1 23 45 67 90",
+      "email": "marie.martin@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/marie_martin.pdf"
+    },
+    {
+      "nom": "Pierre Durand",
+      "adresse": "78 Boulevard Saint-Germain, 75006 Paris, France",
+      "telephone": "+33 1 23 45 67 91",
+      "email": "pierre.durand@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/pierre_durand.pdf"
+    },
+    {
+      "nom": "Sophie Bernard",
+      "adresse": "15 Rue des Fleurs, 69001 Lyon, France",
+      "telephone": "+33 4 23 45 67 89",
+      "email": "sophie.bernard@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/sophie_bernard.pdf"
+    },
+    {
+      "nom": "Lucie Robert",
+      "adresse": "34 Rue de la Paix, 33000 Bordeaux, France",
+      "telephone": "+33 5 23 45 67 89",
+      "email": "lucie.robert@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/lucie_robert.pdf"
+    },
+    {
+      "nom": "Thomas Moreau",
+      "adresse": "56 Rue des Acacias, 31000 Toulouse, France",
+      "telephone": "+33 5 23 45 67 90",
+      "email": "thomas.moreau@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/thomas_moreau.pdf"
+    },
+    {
+      "nom": "Emma Petit",
+      "adresse": "89 Avenue des Champs-Élysées, 75008 Paris, France",
+      "telephone": "+33 1 23 45 67 92",
+      "email": "emma.petit@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/emma_petit.pdf"
+    },
+    {
+      "nom": "Paul Lefevre",
+      "adresse": "23 Rue de Rivoli, 75004 Paris, France",
+      "telephone": "+33 1 23 45 67 93",
+      "email": "paul.lefevre@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/paul_lefevre.pdf"
+    },
+    {
+      "nom": "Camille Richard",
+      "adresse": "67 Rue de la Liberté, 59000 Lille, France",
+      "telephone": "+33 3 23 45 67 89",
+      "email": "camille.richard@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/camille_richard.pdf"
+    },
+    {
+      "nom": "Antoine Garcia",
+      "adresse": "12 Rue du Lac, 74000 Annecy, France",
+      "telephone": "+33 4 23 45 67 89",
+      "email": "antoine.garcia@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/antoine_garcia.pdf"
+    },
+    {
+      "nom": "Nathalie Dupuis",
+      "adresse": "34 Rue de Bretagne, 75003 Paris, France",
+      "telephone": "+33 1 23 45 67 94",
+      "email": "nathalie.dupuis@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/nathalie_dupuis.pdf"
+    },
+    {
+      "nom": "Julien Morel",
+      "adresse": "78 Rue de Lyon, 69002 Lyon, France",
+      "telephone": "+33 4 23 45 67 90",
+      "email": "julien.morel@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/julien_morel.pdf"
+    },
+    {
+      "nom": "Chloé Simon",
+      "adresse": "23 Rue de l'Université, 75007 Paris, France",
+      "telephone": "+33 1 23 45 67 95",
+      "email": "chloe.simon@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/chloe_simon.pdf"
+    },
+    {
+      "nom": "Benjamin Michel",
+      "adresse": "45 Rue de la Victoire, 75009 Paris, France",
+      "telephone": "+33 1 23 45 67 96",
+      "email": "benjamin.michel@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/benjamin_michel.pdf"
+    },
+    {
+      "nom": "Inès Lambert",
+      "adresse": "67 Rue des Écoles, 75005 Paris, France",
+      "telephone": "+33 1 23 45 67 97",
+      "email": "ines.lambert@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/ines_lambert.pdf"
+    },
+    {
+      "nom": "Hugo Lefevre",
+      "adresse": "34 Rue du Maréchal Foch, 59000 Lille, France",
+      "telephone": "+33 3 23 45 67 90",
+      "email": "hugo.lefevre@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/hugo_lefevre.pdf"
+    },
+    {
+      "nom": "Alice Fontaine",
+      "adresse": "23 Rue de la Liberté, 67000 Strasbourg, France",
+      "telephone": "+33 3 23 45 67 91",
+      "email": "alice.fontaine@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/alice_fontaine.pdf"
+    },
+    {
+      "nom": "Matthieu Rousseau",
+      "adresse": "45 Rue de la République, 69003 Lyon, France",
+      "telephone": "+33 4 23 45 67 91",
+      "email": "matthieu.rousseau@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/matthieu_rousseau.pdf"
+    },
+    {
+      "nom": "Émilie Bonnet",
+      "adresse": "67 Rue de la Gare, 59800 Lille, France",
+      "telephone": "+33 3 23 45 67 92",
+      "email": "emilie.bonnet@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/emilie_bonnet.pdf"
+    },
+    {
+      "nom": "Lucas Girard",
+      "adresse": "89 Rue de l'Horloge, 37000 Tours, France",
+      "telephone": "+33 2 23 45 67 89",
+      "email": "lucas.girard@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/lucas_girard.pdf"
+    },
+    {
+      "nom": "Manon Chevalier",
+      "adresse": "23 Rue de la Mer, 14000 Caen, France",
+      "telephone": "+33 2 23 45 67 90",
+      "email": "manon.chevalier@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/manon_chevalier.pdf"
+    },
+    {
+      "nom": "Louis Millet",
+      "adresse": "45 Rue de la Forêt, 75016 Paris, France",
+      "telephone": "+33 1 23 45 67 98",
+      "email": "louis.millet@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/louis_millet.pdf"
+    },
+    {
+      "nom": "Juliette Renaud",
+      "adresse": "67 Rue de la Montagne, 75018 Paris, France",
+      "telephone": "+33 1 23 45 67 99",
+      "email": "juliette.renaud@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/juliette_renaud.pdf"
+    },
+    {
+      "nom": "Victor Garnier",
+      "adresse": "23 Rue de la Plage, 13007 Marseille, France",
+      "telephone": "+33 4 23 45 67 92",
+      "email": "victor.garnier@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/victor_garnier.pdf"
+    },
+    {
+      "nom": "Charlotte Marchand",
+      "adresse": "45 Rue du Soleil, 34000 Montpellier, France",
+      "telephone": "+33 4 23 45 67 93",
+      "email": "charlotte.marchand@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/charlotte_marchand.pdf"
+    },
+    {
+      "nom": "Arthur Dupuis",
+      "adresse": "67 Rue de la Lune, 69004 Lyon, France",
+      "telephone": "+33 4 23 45 67 94",
+      "email": "arthur.dupuis@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/arthur_dupuis.pdf"
+    },
+    {
+      "nom": "Elisa Blanchard",
+      "adresse": "89 Rue des Vignes, 44000 Nantes, France",
+      "telephone": "+33 2 23 45 67 91",
+      "email": "elisa.blanchard@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/elisa_blanchard.pdf"
+    },
+    {
+      "nom": "Théo Joly",
+      "adresse": "23 Rue de l'Art, 75013 Paris, France",
+      "telephone": "+33 1 23 45 68 00",
+      "email": "theo.joly@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/theo_joly.pdf"
+    },
+    {
+      "nom": "Sarah Colin",
+      "adresse": "45 Rue de l'Industrie, 69005 Lyon, France",
+      "telephone": "+33 4 23 45 68 01",
+      "email": "sarah.colin@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/sarah_colin.pdf"
+    },
+    {
+      "nom": "Léa Perrin",
+      "adresse": "67 Rue de l'Océan, 17000 La Rochelle, France",
+      "telephone": "+33 5 23 45 67 91",
+      "email": "lea.perrin@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/lea_perrin.pdf"
+    },
+    {
+      "nom": "Nathan Robin",
+      "adresse": "89 Rue de la Rivière, 68000 Colmar, France",
+      "telephone": "+33 3 23 45 67 93",
+      "email": "nathan.robin@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/nathan_robin.pdf"
+    },
+    {
+      "nom": "Zoé Leroy",
+      "adresse": "23 Rue de la Montagne, 75019 Paris, France",
+      "telephone": "+33 1 23 45 68 02",
+      "email": "zoe.leroy@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/zoe_leroy.pdf"
+    },
+    {
+      "nom": "Raphaël Masson",
+      "adresse": "45 Rue du Marché, 75010 Paris, France",
+      "telephone": "+33 1 23 45 68 03",
+      "email": "raphael.masson@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/raphael_masson.pdf"
+    },
+    {
+      "nom": "Anaïs Vidal",
+      "adresse": "67 Rue des Alpes, 74000 Annecy, France",
+      "telephone": "+33 4 23 45 68 04",
+      "email": "anais.vidal@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/anais_vidal.pdf"
+    },
+    {
+      "nom": "Maxime Lefevre",
+      "adresse": "89 Rue des Champs, 75017 Paris, France",
+      "telephone": "+33 1 23 45 68 05",
+      "email": "maxime.lefevre@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/maxime_lefevre.pdf"
+    },
+    {
+      "nom": "Amélie Fabre",
+      "adresse": "23 Rue des Plantes, 75020 Paris, France",
+      "telephone": "+33 1 23 45 68 06",
+      "email": "amelie.fabre@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/amelie_fabre.pdf"
+    },
+    {
+      "nom": "Clément Dumont",
+      "adresse": "45 Rue des Peupliers, 75012 Paris, France",
+      "telephone": "+33 1 23 45 68 07",
+      "email": "clement.dumont@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/clement_dumont.pdf"
+    },
+    {
+      "nom": "Laura Caron",
+      "adresse": "67 Rue des Lilas, 75015 Paris, France",
+      "telephone": "+33 1 23 45 68 08",
+      "email": "laura.caron@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/laura_caron.pdf"
+    },
+    {
+      "nom": "Adrien Morel",
+      "adresse": "89 Rue des Primevères, 75014 Paris, France",
+      "telephone": "+33 1 23 45 68 09",
+      "email": "adrien.morel@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/adrien_morel.pdf"
+    },
+    {
+      "nom": "Justine Noël",
+      "adresse": "23 Rue des Ormes, 75011 Paris, France",
+      "telephone": "+33 1 23 45 68 10",
+      "email": "justine.noel@example.com",
+      "fiche_client_url": "http://intranet.company.com/clients/justine_noel.pdf"
+    }
+  ]
+}
