@@ -407,6 +407,7 @@ function genererFooter()
     echo '<div class="copyright bg-dark text-white text-center py-2">';
     echo '<div class="container">';
     echo '<p class="mb-0">&copy; ' . date("Y") . ' Vroumvroumloc - Tous droits réservés</p>';
+    echo '<p>Bonjour!</p>';
     echo '</div>';
     echo '</div>'; // fin de la section droits d'auteur
 
