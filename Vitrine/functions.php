@@ -410,7 +410,6 @@ function genererFooter()
     echo '<p>Bonjour!</p>';
     echo '</div>';
     echo '</div>'; // fin de la section droits d'auteur
-
     echo '</footer>'; // fin du footer
 }
 
