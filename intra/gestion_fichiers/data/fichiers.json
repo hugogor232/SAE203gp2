@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "members": [
+            12,
+            45
+        ],
+        "droit": "personnel",
+        "fichiers": [
+            {
+                "nom": "test1.txt",
+                "date": "13\/02\/2024",
+                "auteur": "Solaymane"
+            },
+            {
+                "nom": "test.txt",
+                "date": "15\/02\/2024",
+                "auteur": "Clément"
+            },
+            {
+                "nom": "Attestation_CFA_Solaymane_ELKALDAOUI.pdf",
+                "date": "05\/06\/2024",
+                "auteur": "Rahmi"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "members": [
+            12,
+            45
+        ],
+        "droit": "personnel",
+        "fichiers": [
+            {
+                "nom": "test1.txt",
+                "date": "13\/02\/2024",
+                "auteur": "Solaymane"
+            },
+            {
+                "nom": "test.txt",
+                "date": "15\/02\/2024",
+                "auteur": "Clément"
+            }
+        ]
+    }
+]
