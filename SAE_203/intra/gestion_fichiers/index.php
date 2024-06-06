@@ -7,14 +7,9 @@
     <?php include 'functions.php';?>
 </head>
 <body>
-    <?php navbar();?>
+    <?php navbar(); list_file(1);?>
     <div class="container-fluid">
-    <?php affiche(12);
-    ?> 
-    </div>
-    <?php
-    boutonAJout();
-    ?>
+    <?php affiche(12); ?>
     </div>
 </body>
 </html>
