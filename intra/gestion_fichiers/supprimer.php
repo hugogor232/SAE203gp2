@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Récupère le chemin du fichier depuis le formulaire
     $filePath = $_POST['filePath'];

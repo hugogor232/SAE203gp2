@@ -5,7 +5,7 @@
             12,
             45
         ],
-        "droit": "personnel",
+        "droit": "public",
         "fichiers": [
             {
                 "nom": "test1.txt",
@@ -18,8 +18,8 @@
                 "auteur": "Clément"
             },
             {
-                "nom": "Attestation_CFA_Solaymane_ELKALDAOUI.pdf",
-                "date": "05\/06\/2024",
+                "nom": "Baccalauréat_général_Solaymane_ELKALDAOUI.pdf",
+                "date": "07\/06\/2024",
                 "auteur": "Rahmi"
             }
         ]
