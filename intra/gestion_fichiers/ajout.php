@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             // Testons si l'extension est autorisée
            if (in_array(explode("." , $_FILES['monfichier']['name'])[1],$extension)){
                     // On peut valider le fichier et le stocker définitivement
-                    move_uploaded_file($_FILES['monfichier']['tmp_name'],'uploads/' . basename($_FILES['monfichier']['name']));
+                    move_uploaded_file($_FILES['monfichier']['tmp_name'], "../espace_fichier/" . (string) $_SESSION["id"] / "/". basename($_FILES['monfichier']['name']));
                     //on met à jour le fichier json
                     $groupes = json_decode(file_get_contents("data/fichiers.json"),true);
                     foreach ($groupes as $groupe){
