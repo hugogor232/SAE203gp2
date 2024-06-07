@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION["id"] = 1;
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -23,11 +23,11 @@ function navbar(){
 	<?php
 } 
 
-function list_file($id){
+/* function list_file($id){
 
   $list =[] ;
   if ($handle = opendir('../espace_fichiers/groupes/' . (string) $id)) {
-    /* Ceci est la façon correcte de traverser un dossier. */
+    // Ceci est la façon correcte de traverser un dossier. 
     while (false !== ($entry = readdir($handle))) {
       if ($entry != "." && $entry != "..") {
       $list[] = $entry;
@@ -35,7 +35,7 @@ function list_file($id){
     }
   }
   return $list;
-}
+} */
 
 function affiche($id){
   $path = "../espace_fichiers/groupes";
@@ -51,7 +51,7 @@ function affiche($id){
   <?php
   $id = 1;
       $path_file = $path . "/" . (string) $id ;
-      $files = list_file(1);
+
       foreach ($groupes as $groupe){
         if ($groupe -> id == $id){
           $i = 0;
@@ -63,7 +63,7 @@ function affiche($id){
             <tr>
               <td>
                 <form action="upload.php" method="post">
-                  <input name="filePath" value="<?=$path_file ."/" . $files[$i] ?>" type="hidden"> 
+                  <input name="filePath" value="<?=$path_file ."/" . $fichier -> nom ?>" type="hidden"> 
                   <input class="btn btn-sm btn-primary" type ="submit" value ="Télécharger">
                 </form>
               </td>
@@ -72,7 +72,7 @@ function affiche($id){
                   if ($droit == "personnel" ){
                     ?>
                       <form action="supprimer.php" method="post">
-                        <input name="filePath" value="<?=$path_file ."/" . $files[$i] ?>" type="hidden"> 
+                        <input name="filePath" value="<?=$path_file ."/" . $fichier -> nom ?>" type="hidden"> 
                         <input class="btn btn-sm btn-danger" type ="submit" value ="Supprimer">
                       </form>
                     <?php
@@ -81,7 +81,7 @@ function affiche($id){
                     if ($_SESSION['role'] == "admin" || $_SESSION['role'] == "modo"){
                   ?>
                       <form action="supprimer.php" method="post">
-                        <input name="filePath" value="<?=$path_file ."/" . $files[$i] ?>" type="hidden"> 
+                        <input name="filePath" value="<?=$path_file ."/" . $fichier -> nom ?>" type="hidden"> 
                         <input class="btn btn-sm btn-danger" type ="submit" value ="Supprimer">
                       </form>
                     <?php
@@ -90,7 +90,7 @@ function affiche($id){
               
               ?>
               </td>
-              <td><a href="<?=$path_file ."/" . $files[$i] ?>"> <?= $files[$i]; ?> </td>
+              <td><a href="<?=$path_file ."/" . $fichier -> nom ?>"> <?= $fichier -> nom; ?> </td>
                   
               <td><?=$date;?></td>
                   
