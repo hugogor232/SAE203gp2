@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:SAE_203/index.php
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -501,3 +502,9 @@
 </body>
 
 </html>
+========
+<?php 
+header('Location: SAE_203/index.php');
+exit;
+?>
+>>>>>>>> main:index.php
