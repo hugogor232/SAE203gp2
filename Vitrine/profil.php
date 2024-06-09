@@ -1,122 +1,139 @@
+<!-- profil.php -->
+
 <?php
-session_start();
 
-if (!isset($_SESSION['pseudo'])) {
-    header('Location: login.php');
-    exit;
-}
-
-$pseudo = $_SESSION['pseudo'];
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['email']) && isset($_POST['vehicle'])) {
-
-        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-        if (!$email) {
-        }
-
-        $json_data = file_get_contents('./data/utilisateurs.json');
-        $users = json_decode($json_data, true);
-
-        foreach ($users as &$user) {
-            if ($user['utilisateur'] === $pseudo) {
-                $user['email'] = $email;
-                if (!empty($_POST['password'])) {
-                    $password = $_POST['password'];
-                    $user['motdepasse'] = password_hash($password, PASSWORD_DEFAULT);
-                }
-                $user['vehicule'] = $_POST['vehicle'];
-                break;
-            }
-        }
-
-        file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
-
-        header('Location: profil.php');
-        exit;
+include ('functions.php');
+if (isset($_GET['action']) && $_GET['action'] === 'supprimer_annonce' && isset($_GET['id'])) {
+    $annonce_id = $_GET['id'];
+    $annonces_json = file_get_contents('./data/annonces.json');
+    $annonces = json_decode($annonces_json, true);
+    if (isset($annonces[$annonce_id])) {
+        unset($annonces[$annonce_id]);
+        file_put_contents('./data/annonces.json', json_encode($annonces));
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
     }
 }
 
+// Lire le fichier JSON
+$json_data = file_get_contents('./data/voitures.json');
+$voitures = json_decode($json_data, true);
 
-$json_data = file_get_contents('./data/utilisateurs.json');
-$users = json_decode($json_data, true);
+// Filtrer les voitures en fonction des critères de recherche
+if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant'])) {
+    $marque = $_GET['marque'] ?? '';
+    $prix = $_GET['prix'] ?? '';
+    $carburant = $_GET['carburant'] ?? '';
 
-foreach ($users as $user) {
-    if ($user['utilisateur'] === $pseudo) {
-        $email = $user['email'];
-        $vehicle = $user['vehicule'];
-        break;
-    }
+    $voitures = array_filter($voitures, function ($voiture) use ($marque, $prix, $carburant) {
+        if ($marque && $voiture['marque'] !== $marque) {
+            return false;
+        }
+        if ($prix && $voiture['prix'] > $prix) {
+            return false;
+        }
+        if ($carburant && $voiture['carburant'] !== $carburant) {
+            return false;
+        }
+        return true;
+    });
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+<?php genererHeader(); ?> <!-- Appel de la fonction genererHeader() -->
+<?php genererNavigation(); ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
+    <title>Proposer des Voitures à Louer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <?php include ('functions.php'); ?>
-    <?php genererNavigation(); ?>
 
+    <!-- Page Content -->
     <div class="container mt-5">
-        <div class="row align-items-center mb-4">
-            <div class="col-auto">
-                <img src="./images/img_avatar1.png" alt="Logo" width="100" height="100" style="border-radius: 50%;">
-            </div>
-            <div class="col">
-                <h1 class="mb-0">Bienvenue sur votre profil,
-                    <?php echo htmlspecialchars($pseudo); ?>
-                </h1>
-            </div>
-        </div>
-        <h2>Modifier votre profil</h2>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="mb-3">
-                <label for="email" class="form-label">Nouvel email :</label>
-                <input type="email" class="form-control" id="email" name="email"
-                    value="<?php echo htmlspecialchars($email); ?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Nouveau mot de passe (laissez vide pour ne pas changer)
-                    :</label>
-                <input type="password" class="form-control" id="password" name="password">
-            </div>
-            <div class="mb-3">
-                <label for="vehicle" class="form-label">Nouveau véhicule :</label>
-                <input type="text" class="form-control" id="vehicle" name="vehicle"
-                    value="<?php echo htmlspecialchars($vehicle); ?>" required>
-            </div>
-            <button type="submit" class="btn btn-primary me-2">Modifier</button>
-            <a href="logout.php" class="btn btn-danger">Se déconnecter</a>
-            <button type="button" class="btn btn-secondary ms-2" data-bs-toggle="modal"
-                data-bs-target="#changeAvatarModal">Changer d'avatar</button>
-        </form>
-    </div>
-
-    <!-- Modal pour changer l'avatar -->
-    <div class="modal fade" id="changeAvatarModal" tabindex="-1" aria-labelledby="changeAvatarModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="changeAvatarModalLabel">Changer d'avatar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Formulaire de changement d'avatar ici...</p>
+        <h1 class="text-center mb-5">Nos Voitures à Louer</h1>
+        <div class="row">
+            <!-- Sidebar Menu -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Filtrer les voitures</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="GET" action="proposer.php">
+                            <div class="mb-3">
+                                <label for="marque" class="form-label">Marque</label>
+                                <select id="marque" name="marque" class="form-select">
+                                    <option value="">Toutes les marques</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="BMW">BMW</option>
+                                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                    <option value="Audi">Audi</option>
+                                    <option value="Volkswagen">Volkswagen</option>
+                                    <option value="Ford">Ford</option>
+                                    <option value="Tesla">Tesla</option>
+                                    <option value="Porsche">Porsche</option>
+                                    <option value="Chevrolet">Chevrolet</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="prix" class="form-label">Prix maximum (€ par heure)</label>
+                                <input type="number" id="prix" name="prix" class="form-control" placeholder="Prix en €">
+                            </div>
+                            <div class="mb-3">
+                                <label for="carburant" class="form-label">Type de carburant</label>
+                                <select id="carburant" name="carburant" class="form-select">
+                                    <option value="">Tous</option>
+                                    <option value="Essence">Essence</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Électrique">Électrique</option>
+                                    <option value="Hybride">Hybride</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+
+            <!-- Car Offers -->
+            <div class="col-md-9">
+                <div class="row">
+                    <?php foreach ($voitures as $voiture): ?>
+                        <div class="col-12 mb-4">
+                            <div class="card h-100 d-flex flex-row">
+                                <div class="card-body flex-grow-1">
+                                    <h5 class="card-title">
+                                        <?php echo htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>
+                                    </h5>
+                                    <p class="card-text">Prix : <?php echo number_format($voiture['prix'], 2, ',', ' '); ?>
+                                        €/heure</p>
+                                    <p class="card-text">Année : <?php echo htmlspecialchars($voiture['annee']); ?></p>
+                                    <p class="card-text">Carburant : <?php echo htmlspecialchars($voiture['carburant']); ?>
+                                    </p>
+                                    <a href="reservation.php?voiture=<?php echo urlencode($voiture['marque'] . ' ' . $voiture['modele']); ?>"
+                                        class="btn btn-primary">Réserver</a>
+                                </div>
+                                <img src="<?php echo htmlspecialchars($voiture['image']); ?>" class="card-img-right"
+                                    alt="<?php echo htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>"
+                                    style="width: 200px; object-fit: cover;">
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

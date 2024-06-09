@@ -1,43 +1,39 @@
 <!-- functions.php -->
 
 <?php
-//functions.php
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// Partie Entete
 function genererHeader()
 {
-    if (isset($_SESSION['pseudo'])) {
-        $json_data = file_get_contents('./data/utilisateurs.json');
-
+    if (isset($_SESSION['email'])) {
+        $json_data = file_get_contents('./data/users.json');
         $users = json_decode($json_data, true);
 
         if ($users !== null) {
-            $pseudo = $_SESSION['pseudo'];
+            $email = $_SESSION['email'];
             $currentUser = null;
             foreach ($users as $user) {
-                if ($user['utilisateur'] === $pseudo) {
+                if ($user['email'] === $email) {
                     $currentUser = $user;
                     break;
                 }
             }
 
             if ($currentUser !== null) {
-                $email = $currentUser['email'];
-                $vehicle = $currentUser['vehicule'];
+                $prenom = htmlspecialchars($currentUser['prenom']);
+                $nom = htmlspecialchars($currentUser['nom']);
+                $adresse = htmlspecialchars($currentUser['adresse']);
+                $telephone = htmlspecialchars($currentUser['telephone']);
 
-
-
-                // Modifier les classes Bootstrap
                 echo '<header class="jumbotron bg-white">';
                 echo '<div class="container">';
                 echo '<div class="row align-items-center">';
                 echo '<div class="col-md-3"><img src="./images/img_avatar1.png" alt="Logo" class="img-fluid rounded-circle" width="150" height="150"></div>';
                 echo '<div class="col-md-6"><h1 class="display-4">Site de Location de Voitures</h1></div>';
                 echo '<div class="col-md-3 text-end">';
-                echo '<h3 class="mb-0">Bienvenue, ' . $pseudo . '</h3>';
+                echo '<h3 class="mb-0">Bienvenue, ' . $prenom . ' ' . $nom . '</h3>';
                 echo '<a href="logout.php" class="btn btn-dark me-3">Se déconnecter</a>';
                 echo '<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">Mon Profil</button>';
                 echo '</div>';
@@ -45,95 +41,122 @@ function genererHeader()
                 echo '</div>';
                 echo '</header>';
 
-
-                // Affiche le formulaire de modification de profil dans un offcanvas
                 echo '
-                <div class="offcanvas offcanvas-start " id="demo">
-                    <div class="offcanvas-header">
-                        <h1 class="offcanvas-title">Profil</h1>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div class="container mt-5">
-                            <div class="row align-items-center mb-4">
-                                <div class="col-auto">
-                                    <img src="./images/img_avatar1.png" alt="Logo" width="100" height="100" style="border-radius: 50%;">
-                                </div>
-                                <div class="col">
-                                    <h1 class="mb-0">Bienvenue sur votre profil, ' . $pseudo . '</h1>
-                                </div>
-                            </div>
-                            <h2>Modifier votre profil</h2>
-                            <form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Nouvel email :</label>
-                                    <input type="email" class="form-control" id="email" name="email" value="' . htmlspecialchars($email) . '" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="vehicle" class="form-label">Nouveau véhicule :</label>
-                                    <input type="text" class="form-control" id="vehicle" name="vehicle" value="' . htmlspecialchars($vehicle) . '" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Nouveau mot de passe (laissez vide pour ne pas changer) :</label>
-                                    <input type="password" class="form-control" id="password" name="password">
-                                </div>
-                                <button type="submit" class="btn btn-primary me-2">Modifier</button>
-                                <a href="logout.php" class="btn btn-danger">Se déconnecter</a>
-                            </form>
+                    <div class="offcanvas offcanvas-start " id="demo">
+                        <div class="offcanvas-header">
+                            <h1 class="offcanvas-title">Profil</h1>
                         </div>
-                    </div>
-                </div>';
-                echo '</header>';
+                        <div class="offcanvas-body">
+                            <div class="container mt-5">
+                                <div class="row align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <img src="./images/img_avatar1.png" alt="Logo" width="100" height="100" style="border-radius: 50%;">
+                                    </div>
+                                    <div class="col">
+                                        <h1 class="mb-0">Bienvenue sur votre profil, ' . $prenom . ' ' . $nom . '</h1>
+                                    </div>
+                                </div>
+                                <h2>Modifier votre profil</h2>
+                                <form action="index.php" method="post">
+                                    <div class="mb-3">
+                                        <label for="prenom" class="form-label">Nouveau prénom :</label>
+                                        <input type="text" class="form-control" id="prenom" name="prenom" value="' . $prenom . '" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nom" class="form-label">Nouveau nom :</label>
+                                        <input type="text" class="form-control" id="nom" name="nom" value="' . $nom . '" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Nouvel email :</label>
+                                        <input type="email" class="form-control" id="email" name="email" value="' . htmlspecialchars($email) . '" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Nouveau mot de passe (laissez vide pour ne pas changer) :</label>
+                                        <input type="password" class="form-control" id="password" name="password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="adresse" class="form-label">Nouvelle adresse :</label>
+                                        <input type="text" class="form-control" id="adresse" name="adresse" value="' . $adresse . '" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telephone" class="form-label">Nouveau numéro de téléphone :</label>
+                                        <input type="text" class="form-control" id="telephone" name="telephone" value="' . $telephone . '" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary me-2">Modifier</button>
+                                    <a href="logout.php" class="btn btn-danger">Se déconnecter</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>';
             } else {
-                // Gestion des erreurs si l'utilisateur n'est pas trouvé
                 echo '<p>Utilisateur non trouvé.</p>';
             }
         } else {
-            // Gestion des erreurs si la lecture du fichier JSON a échoué
             echo '<p>Erreur de lecture du fichier JSON.</p>';
         }
-    } else {
     }
-
 }
 
 function modifProfil()
 {
-    $pseudo = $_SESSION['pseudo'];
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['vehicle'])) {
-
-            $json_data = file_get_contents('./data/utilisateurs.json');
-            $users = json_decode($json_data, true);
-
-            foreach ($users as &$user) {
-                if ($user['utilisateur'] === $pseudo) {
-                    $user['email'] = $_POST['email'];
-                    $user['motdepasse'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                    $user['vehicule'] = $_POST['vehicle'];
-                    break;
-                }
-            }
-
-            file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
-
-            header('Location: profil.php');
-            exit;
-        }
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
     }
 
-    $json_data = file_get_contents('./data/utilisateurs.json');
+    if (!isset($_SESSION['email'])) {
+        return false; // Utilisateur non connecté, la fonction renvoie false
+    }
+
+    $email = $_SESSION['email'];
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $prenom = filter_var($_POST['prenom'], FILTER_SANITIZE_STRING);
+        $nom = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
+        $new_email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+        $adresse = filter_var($_POST['adresse'], FILTER_SANITIZE_STRING);
+        $telephone = filter_var($_POST['telephone'], FILTER_SANITIZE_STRING);
+        $password = !empty($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : null;
+
+        $json_data = file_get_contents('./data/users.json');
+        $users = json_decode($json_data, true);
+
+        foreach ($users as &$user) {
+            if ($user['email'] === $email) {
+                $user['prenom'] = $prenom;
+                $user['nom'] = $nom;
+                $user['email'] = $new_email ? $new_email : $user['email'];
+                $user['adresse'] = $adresse;
+                $user['telephone'] = $telephone;
+                if ($password) {
+                    $user['password'] = $password;
+                }
+                break;
+            }
+        }
+
+        file_put_contents('./data/users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+        $_SESSION['prenom'] = $prenom;
+        $_SESSION['nom'] = $nom;
+        $_SESSION['email'] = $new_email ? $new_email : $email;
+    }
+
+    $json_data = file_get_contents('./data/users.json');
     $users = json_decode($json_data, true);
 
     foreach ($users as $user) {
-        if ($user['utilisateur'] === $pseudo) {
+        if ($user['email'] === $email) {
+            $prenom = $user['prenom'];
+            $nom = $user['nom'];
             $email = $user['email'];
-            $vehicle = $user['vehicule'];
+            $adresse = $user['adresse'];
+            $telephone = $user['telephone'];
             break;
         }
     }
-}
 
+    return true; // Utilisateur connecté, la fonction renvoie true
+}
 
 // Partie Navbar
 function genererNavigation()
@@ -169,31 +192,30 @@ function genererNavigation()
 }
 
 
-// Partie Navbar
+// Partie Login
 function genererLogin()
 {
     // Initialisation de la variable d'erreur
     $erreur_message = '';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST['pseudo']) && isset($_POST['password'])) {
-            $json_data = file_get_contents('./data/utilisateurs.json');
+        if (isset($_POST['email']) && isset($_POST['password'])) {
+            $json_data = file_get_contents('./data/users.json');
             $users = json_decode($json_data, true);
-            $pseudo_saisi = $_POST['pseudo'];
+            $email_saisi = $_POST['email'];
             $password_saisi = $_POST['password'];
 
             foreach ($users as $user) {
-                if ($user['utilisateur'] === $pseudo_saisi && password_verify($password_saisi, $user['motdepasse'])) {
+                if ($user['email'] === $email_saisi && $user['password'] === $password_saisi) {
 
-                    $_SESSION['pseudo'] = $user['utilisateur'];
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['role'] = $user['role'];
 
-                    setcookie('pseudo', $user['utilisateur'], time() + (86400 * 30), "/"); // Cookie valable pendant 30 jours
-                    setcookie('role', $user['role'], time() + (86400 * 30), "/"); // Cookie valable pendant 30 jours
-
                     if ($_SESSION['role'] === 'admin') {
                         header('Location: administrer.php');
+                    }
+                    if ($_SESSION['role'] === 'employe') {
+                        header('Location: ../intra/index.php');
                     } else {
                         header('Location: index.php');
                     }
@@ -206,8 +228,6 @@ function genererLogin()
 
     if (isset($_POST['logout'])) {
         session_destroy();
-        setcookie('pseudo', '', time() - 3600, "/");
-        setcookie('role', '', time() - 3600, "/");
         header('Location: index.php');
         exit;
     }
@@ -223,8 +243,8 @@ function genererLogin()
             <div class="modal-body text-dark">
                 <form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post">
                     <div class="mb-3">
-                        <label for="pseudo" class="form-label">Pseudo :</label>
-                        <input type="text" class="form-control" id="pseudo" name="pseudo" required>
+                        <label for="email" class="form-label">email :</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Mot de passe :</label>
@@ -262,51 +282,52 @@ function genererLogin()
 </div>';
 }
 
-
 function genererInscription()
 {
     $error_message = '';
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $pseudo = $_POST['username'];
         $password = $_POST['password'];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $vehicle = $_POST['vehicule'];
         $email = $_POST['email'];
 
-        if (empty($pseudo) || empty($password) || empty($vehicle) || empty($email)) {
+        if (empty($password) || empty($email)) {
             $error_message = "Veuillez remplir tous les champs.";
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error_message = "Adresse email invalide.";
         } else {
-
-            $json_data = file_get_contents('./data/utilisateurs.json');
+            $json_data = file_get_contents('./data/users.json');
             $users = json_decode($json_data, true);
-
+            echo "ok";
             foreach ($users as $user) {
-                if ($user['utilisateur'] === $pseudo) { // Pseudo déjà utilisé
-                    $error_message = "Ce pseudo est déjà utilisé.";
+                if ($user['email'] === $email) {
+                    $error_message = "Cet email est déjà utilisé.";
                     break;
                 }
             }
 
             if (empty($error_message)) {
                 $new_user = array(
-                    'utilisateur' => $pseudo,
-                    'motdepasse' => $hashed_password,
-                    'vehicule' => $vehicle,
+                    'prenom' => $_POST['prenom'],
+                    'nom' => $_POST['nom'],
+                    'password' => $password,
+                    'adresse' => $_POST['adresse'],
                     'email' => $email,
-                    'role' => 'user'
+                    'telephone' => $_POST['telephone'],
+                    'dob' => $_POST['dob'],
+                    'role' => 'utilisateur'
                 );
                 $users[] = $new_user;
 
-                file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+                file_put_contents('./data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 
+                // Redirection vers une page de confirmation
                 header('Location: inscription_success.php');
                 exit;
             }
         }
     }
 }
+
 
 
 
@@ -346,7 +367,7 @@ function genererFooter()
     echo '<div class="col-md-2 text-center mb-3">';
     echo '<a href="https://www.toyota.fr/"><img src="./images/Logo_partenariat/toyota.png" alt="Toyota" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
-    echo '</div>'; // fin de la première ligne de partenaires
+    echo '</div>';
 
     // Deuxième ligne de partenaires
     echo '<div class="row justify-content-center py-5">';
@@ -354,30 +375,29 @@ function genererFooter()
     echo '<a href="https://www.volkswagen.fr/"><img src="./images/Logo_partenariat/volkswagen.png" alt="Volkswagen" class="img-fluid" style="width: 70%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
-    echo '<a href="https://www.opel.fr/"><img src="./images/Logo_partenariat/Opel.png" alt="opel" class="img-fluid" style="width: 50%;"></a>';
+    echo '<a href="https://www.opel.fr/"><img src="./images/Logo_partenariat/opel.png" alt="opel" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
     echo '<a href="https://www.citroen.fr/"><img src="./images/Logo_partenariat/citroen.png" alt="citroen" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
-    echo '<a href="https://www.honda.fr/"><img src="./images/Logo_partenariat/Honda.png" alt="honda" class="img-fluid" style="width: 50%;"></a>';
+    echo '<a href="https://www.honda.fr/"><img src="./images/Logo_partenariat/honda.png" alt="honda" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
-    echo '<a href="https://www.nissan.fr/"><img src="./images/Logo_partenariat/Nissan.png" alt="nissan" class="img-fluid" style="width: 40%;"></a>';
+    echo '<a href="https://www.nissan.fr/"><img src="./images/Logo_partenariat/nissan.png" alt="nissan" class="img-fluid" style="width: 40%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
-    echo '<a href="https://www.tesla.com/"><img src="./images/Logo_partenariat/Tesla.png" alt="tesla" class="img-fluid" style="width: 50%;"></a>';
+    echo '<a href="https://www.tesla.com/"><img src="./images/Logo_partenariat/tesla.png" alt="tesla" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
-    echo '</div>'; // fin de la deuxième ligne de partenaires
-
-    echo '</div>'; // fin de la section des partenaires
+    echo '</div>';
+    echo '</div>';
 
     // À propos
     echo '<div class="row p-5">';
-
     echo '<div class="col-md-5">';
     echo '<h5>À propos de Vroumvroumloc</h5>';
     echo '<p>Location de véhicules pour tous vos déplacements.</p>';
+    echo '<p class="mb-0">&copy; ' . date("Y") . ' Vroumvroumloc - Tous droits réservés</p>';
     echo '</div>';
 
     // Contact
@@ -399,18 +419,8 @@ function genererFooter()
     echo '<li><i class="fab fa-instagram"></i> <span class="ms-2">Instagram</span></li>';
     echo '</ul>';
     echo '</div>';
-
-    echo '</div>'; // fin de la section À propos, Contact, Réseaux sociaux
-    echo '</div>'; // fin de la div container
-
-    // Droits d'auteur
-    echo '<div class="copyright bg-dark text-white text-center py-2">';
-    echo '<div class="container">';
-    echo '<p class="mb-0">&copy; ' . date("Y") . ' Vroumvroumloc - Tous droits réservés</p>';
-    echo '<p>Bonjour!</p>';
     echo '</div>';
-    echo '</div>'; // fin de la section droits d'auteur
-    echo '</footer>'; // fin du footer
+    echo '</footer>';
 }
 
 
@@ -419,7 +429,7 @@ function genererFooter()
 
 function administrer()
 {
-    $json_data = file_get_contents('./data/utilisateurs.json');
+    $json_data = file_get_contents('./data/users.json');
     $users = json_decode($json_data, true);
 
     if (isset($_POST['search'])) {
@@ -444,17 +454,16 @@ function administrer()
             unset($users[$user_id]);
         }
 
-        file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+        file_put_contents('./data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 
         header('Location: administrer.php');
         exit;
     }
 
-
     foreach ($filtered_users as $key => $user): ?>
         <tr>
             <td>
-                <?php echo $user['utilisateur']; ?>
+                <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
             </td>
             <td>
                 <?php echo $user['email']; ?>
@@ -468,8 +477,8 @@ function administrer()
                     <input type="hidden" name="action" value="modifier_role">
                     <select name="nouveau_role" class="form-select d-inline me-2">
                         <option value="admin">Administrateur</option>
-                        <option value="user">Utilisateur</option>
-                        <option value="modo">Modérateur</option>
+                        <option value="utilisateur">Utilisateur</option>
+                        <option value="employe">Employe</option>
                         <option value="visitor">Visiteur</option>
                     </select>
                     <button type="submit" class="btn btn-outline-info"><i class="fas fa-edit me-1"></i>Modifier</button>
@@ -484,8 +493,5 @@ function administrer()
         </tr>
     <?php endforeach;
 }
-
-
-
 
 ?>

@@ -1,0 +1,242 @@
+{
+    "0": {
+        "prenom": "Sophie",
+        "nom": "Leclerc",
+        "password": "Sophie123",
+        "adresse": "15 Rue de la R\u00e9publique",
+        "email": "s.leclerc@example.com",
+        "telephone": "06.12.34.56.78",
+        "dob": "1985-02-14",
+        "role": "utilisateur"
+    },
+    "1": {
+        "prenom": "Thomas",
+        "nom": "Dubois",
+        "password": "Dubois789",
+        "adresse": "8 Avenue Victor Hugo",
+        "email": "thomas_d@example.com",
+        "telephone": "01.23.45.67.89",
+        "dob": "1992-03-18",
+        "role": "utilisateur"
+    },
+    "2": {
+        "prenom": "Marie",
+        "nom": "Lefevre",
+        "password": "MarieLef",
+        "adresse": "10 Rue des Lilas",
+        "email": "marie78@example.com",
+        "telephone": "06.98.76.54.32",
+        "dob": "1980-11-03",
+        "role": "utilisateur"
+    },
+    "3": {
+        "prenom": "Philippe",
+        "nom": "Rousseau",
+        "password": "PhilRouss",
+        "adresse": "4 Impasse des Cerisiers",
+        "email": "philippe_rousseau@example.com",
+        "telephone": "02.34.56.78.90",
+        "dob": "1976-04-22",
+        "role": "utilisateur"
+    },
+    "4": {
+        "prenom": "Julie",
+        "nom": "Martin",
+        "password": "JulieM123",
+        "adresse": "22 Rue du Commerce",
+        "email": "julie.m@example.com",
+        "telephone": "07.65.43.21.09",
+        "dob": "1991-09-09",
+        "role": "utilisateur"
+    },
+    "5": {
+        "prenom": "Antoine",
+        "nom": "Dupont",
+        "password": "Antoine456",
+        "adresse": "5 Place de la Libert\u00e9",
+        "email": "antoine.dupont@example.com",
+        "telephone": "03.45.67.89.01",
+        "dob": "1988-08-07",
+        "role": "utilisateur"
+    },
+    "6": {
+        "prenom": "Val\u00e9rie",
+        "nom": "Girard",
+        "password": "ValGirard2",
+        "adresse": "12 Avenue des Roses",
+        "email": "val_g@example.com",
+        "telephone": "04.56.78.90.12",
+        "dob": "1975-01-16",
+        "role": "utilisateur"
+    },
+    "7": {
+        "prenom": "Nicolas",
+        "nom": "Bertrand",
+        "password": "NicoBer",
+        "adresse": "7 Rue du Ch\u00eane",
+        "email": "nicolasb@example.com",
+        "telephone": "06.78.90.12.34",
+        "dob": "1983-07-25",
+        "role": "utilisateur"
+    },
+    "8": {
+        "prenom": "Sandrine",
+        "nom": "Leroy",
+        "password": "Sandrine67",
+        "adresse": "18 Rue des Violettes",
+        "email": "sandrine.leroy@example.com",
+        "telephone": "01.23.45.67.89",
+        "dob": "1977-12-12",
+        "role": "utilisateur"
+    },
+    "9": {
+        "prenom": "Guillaume",
+        "nom": "Moreau",
+        "password": "GuiMore",
+        "adresse": "9 Avenue du G\u00e9n\u00e9ral de Gaulle",
+        "email": "guillaume.m@example.com",
+        "telephone": "02.34.56.78.90",
+        "dob": "1981-05-30",
+        "role": "utilisateur"
+    },
+    "10": {
+        "prenom": "Caroline",
+        "nom": "Fournier",
+        "password": "Caro1234",
+        "adresse": "3 Rue des Acacias",
+        "email": "caroline_f@example.com",
+        "telephone": "03.45.67.89.01",
+        "dob": "1984-10-08",
+        "role": "utilisateur"
+    },
+    "11": {
+        "prenom": "David",
+        "nom": "Martinez",
+        "password": "DavidMtz",
+        "adresse": "6 Rue de la Paix",
+        "email": "david.martinez@example.com",
+        "telephone": "04.56.78.90.12",
+        "dob": "1974-02-20",
+        "role": "utilisateur"
+    },
+    "12": {
+        "prenom": "Christine",
+        "nom": "Garcia",
+        "password": "ChrisGarc",
+        "adresse": "11 Avenue Foch",
+        "email": "christine_g@example.com",
+        "telephone": "05.67.89.01.23",
+        "dob": "1972-06-15",
+        "role": "utilisateur"
+    },
+    "13": {
+        "prenom": "Pierre",
+        "nom": "Andr\u00e9",
+        "password": "PierreA567",
+        "adresse": "1 Rue de la Fontaine",
+        "email": "p.andre@example.com",
+        "telephone": "06.78.90.12.34",
+        "dob": "1986-11-05",
+        "role": "utilisateur"
+    },
+    "14": {
+        "prenom": "Isabelle",
+        "nom": "Gauthier",
+        "password": "IsaGauth",
+        "adresse": "14 Avenue du Soleil",
+        "email": "isabelle.g@example.com",
+        "telephone": "07.89.01.23.45",
+        "dob": "1978-04-10",
+        "role": "utilisateur"
+    },
+    "15": {
+        "prenom": "Marc",
+        "nom": "Legrand",
+        "password": "MarcLeg",
+        "adresse": "2 Rue du Moulin",
+        "email": "m.legrand@example.com",
+        "telephone": "01.23.45.67.89",
+        "dob": "1980-03-25",
+        "role": "utilisateur"
+    },
+    "16": {
+        "prenom": "C\u00e9line",
+        "nom": "Renaud",
+        "password": "CelineR321",
+        "adresse": "13 Avenue des Cerisiers",
+        "email": "celine.renaud@example.com",
+        "telephone": "02.34.56.78.90",
+        "dob": "1982-08-18",
+        "role": "utilisateur"
+    },
+    "17": {
+        "prenom": "Jean",
+        "nom": "Jacques",
+        "password": "JeanJ456",
+        "adresse": "7 Rue des Moulins",
+        "email": "jjacques@example.com",
+        "telephone": "03.45.67.89.01",
+        "dob": "1976-01-09",
+        "role": "utilisateur"
+    },
+    "18": {
+        "prenom": "Nathalie",
+        "nom": "Mercier",
+        "password": "NathMerc",
+        "adresse": "16 Rue de la Libert\u00e9",
+        "email": "nathalie.mercier@example.com",
+        "telephone": "04.56.78.90.12",
+        "dob": "1979-09-14",
+        "role": "utilisateur"
+    },
+    "19": {
+        "prenom": "Haziz",
+        "nom": "SHEHU",
+        "password": "h",
+        "adresse": "16 Rue de la Libert\u00e9",
+        "email": "haziz@gmail.com",
+        "telephone": "04.56.78.90.11",
+        "dob": "1979-09-14",
+        "role": "admin"
+    },
+    "20": {
+        "prenom": "Clement",
+        "nom": "LEROUX",
+        "password": "bonjour",
+        "adresse": "5 rue de la rue",
+        "email": "clement@gmail.com",
+        "telephone": "04.56.78.55.13",
+        "dob": "1979-10-14",
+        "role": "employe"
+    },
+    "21": {
+        "prenom": "Lucas",
+        "nom": "gilbert",
+        "password": "bonjour1",
+        "adresse": "saint",
+        "email": "lucas@gmail.com",
+        "telephone": "06455",
+        "dob": "2005-06-16",
+        "role": "employe"
+    },
+    "23": {
+        "prenom": "lucas",
+        "nom": "gilbert",
+        "password": "bonjour",
+        "adresse": "ok",
+        "email": "lucas2@gmail.com",
+        "telephone": "1566654",
+        "dob": "2024-05-19",
+        "role": "employe"
+    },
+    "24": {
+        "prenom": "User",
+        "nom": "USER",
+        "password": "bonjour",
+        "adresse": "16 Rue de la Liberte",
+        "email": "user@gmail.com",
+        "telephone": "04.56.78.90.14",
+        "dob": "2001-01-01",
+        "role": "utilisateur"
+    }
+}
