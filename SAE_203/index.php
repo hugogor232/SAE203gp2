@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:SAE_203/index.php
+<<<<<<<< HEAD:SAE_203/index.php
+=======
+>>>>>>> origin/main
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +20,10 @@
 <body>
 
     <?php
+<<<<<<< HEAD
     session_start();
+=======
+>>>>>>> origin/main
     include ('functions.php');
     genererHeader();
     ?>
@@ -34,7 +41,11 @@
                     <h1 class="display-1">Bienvenue chez Vroumvroumloc!</h1>
                     <p class="lead">Louez des véhicules pour tous vos déplacements.</p>
                     <?php genererLogin(); ?>
+<<<<<<< HEAD
                     <?php if (isset($_SESSION['email'])): ?>
+=======
+                    <?php if (isset($_SESSION['pseudo'])): ?>
+>>>>>>> origin/main
                         <a href="ajout_annonce.php" class="btn btn-lg btn-primary rounded-pill">Réserver un véhicule</a>
                     <?php else: ?>
                         <p class="mt-3">Connectez-vous pour réserver un véhicule.</p>
@@ -51,13 +62,21 @@
     </header>
 
     <div class="theme" onclick="toggleTheme()">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         <!-- Menu déroulant -->
         <div class="offcanvas offcanvas-end bg-light text-light" id="barre">
             <div class="container-fluid bg-dark text-dark py-2">
                 <div class="container">
                     <ul class="nav flex-column">
                         <!-- Afficher les éléments du menu en fonction de l'état de connexion -->
+<<<<<<< HEAD
                         <?php if (isset($_SESSION['email'])): ?>
+=======
+                        <?php if (isset($_SESSION['pseudo'])): ?>
+>>>>>>> origin/main
                             <li class="nav-item">
                                 <a href="profil.php" class="btn btn-outline-light w-100 mb-2">
                                     <i class="fas fa-user fa-lg me-2"></i> Profile
@@ -173,7 +192,11 @@
                         </div>
                     </div>
                     <div class="carousel-item">
+<<<<<<< HEAD
                         <img src="./images/Voiture5.jpg" alt="Peugot" class="d-block w-100">
+=======
+                        <img src="./images/voiture5.jpg" alt="Peugot" class="d-block w-100">
+>>>>>>> origin/main
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Peugot E-3008</h3>
                             <p>Apprenez à connaître Peugot</p>
@@ -187,14 +210,22 @@
                         </div>
                     </div>
                     <div class="carousel-item">
+<<<<<<< HEAD
                         <img src="./images/Voiture6.jpg" alt="Peugot" class="d-block w-100">
+=======
+                        <img src="./images/voiture6.jpg" alt="Peugot" class="d-block w-100">
+>>>>>>> origin/main
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Peugot 208 Hybride</h3>
                             <p>Un choix digne pour vous!</p>
                         </div>
                     </div>
                     <div class="carousel-item">
+<<<<<<< HEAD
                         <img src="./images/Voiture7.jpg" alt="Peugot" class="d-block w-100">
+=======
+                        <img src="./images/voiture7.jpg" alt="Peugot" class="d-block w-100">
+>>>>>>> origin/main
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Peugot</h3>
                             <p>Voyager à pleusieurs!</p>
@@ -502,9 +533,17 @@
 </body>
 
 </html>
+<<<<<<< HEAD
 ========
+========
+>>>>>>>> origin/main:index.php
 <?php 
 header('Location: SAE_203/index.php');
 exit;
 ?>
+<<<<<<<< HEAD:SAE_203/index.php
 >>>>>>>> main:index.php
+========
+>>>>>>>> origin/main:index.php
+=======
+>>>>>>> origin/main
