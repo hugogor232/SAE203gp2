@@ -1,7 +1,7 @@
 <?php 
 session_start();
-//$_SESSION["name"] = "Rahmi";
-//$_SESSION["id"] = 1;
+$_SESSION["name"] = "Rahmi";
+$_SESSION["id"] = 1;
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 /*     var_dump(explode("." , $_FILES['monfichier']['name'])[1]); */
     // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
@@ -28,12 +28,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                             break;
                         }
                     }
-                    ?>
-                <meta http-equiv="refresh" content="1;index.php" />
-                     <?php
+                    
+           }
+           else {
+            echo 'fichier non autorisé au téléchargement';
            }
         }
+        else{
+            echo 'fichier trop gros';
+        }
     }
+    else {
+        echo 'Le fichier n\'a pas bien charger ou contient une erreur';
+    }
+    ?>
+                <meta http-equiv="refresh" content="1;index.php" />
+                     <?php
 }
 ?>
 

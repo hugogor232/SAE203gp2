@@ -1,4 +1,6 @@
 <?php session_start();
+$_SESSION['role'] = "modo";
+$_SESSION['id'] = 1;
 
 ?>
 <!doctype html>
@@ -15,11 +17,14 @@
 
 function navbar(){
 	?>
-  <div class="container-fluid">
-	<nav class="navbar navbar-dark bg-dark text-light">
-		Groupe 1
-	</nav>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+      </svg>
+      <a class="navbar-brand text-center" href="#">PartageFichier</a>
+      </div>
+    </nav>
 	<?php
 } 
 
@@ -40,14 +45,24 @@ function navbar(){
 function affiche($id){
   $path = "../espace_fichiers/groupes";
   $groupes = json_decode(file_get_contents("data/fichiers.json"));?>
-  <table class="table table-striped table-hover">
-      <tr>
-          <td></td>
-          <td></td>
-          <td>Nom</td>
-          <td>Envoyé le</td>
-          <td>Envoyé par</td>
-      </tr>
+  
+  <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fichiers partagés</h5>
+            <form class="d-flex" role="search">
+              <input id="searchBar" class="form-control me-2" type="text" onkeyup="showHint(this.value)" placeholder="Rechercher un fichier" aria-label="Search">
+            </form>
+            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+            <table id="txtHint"class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Actions</th>
+                  <th scope="col">Nom du fichier</th>
+                  <th scope="col">Date d'envoi</th>
+                  <th scope="col">Envoyé par</th>
+                </tr>
+              </thead>
+              <tbody>
   <?php
   $id = 1;
       $path_file = $path . "/" . (string) $id ;
@@ -60,14 +75,13 @@ function affiche($id){
             $date = $fichier -> date;
             $auteur = $fichier -> auteur;
             ?>
+            
             <tr>
               <td>
                 <form action="upload.php" method="post">
                   <input name="filePath" value="<?=$path_file ."/" . $fichier -> nom ?>" type="hidden"> 
                   <input class="btn btn-sm btn-primary" type ="submit" value ="Télécharger">
                 </form>
-              </td>
-              <td>
                 <?php
                   if ($droit == "personnel" ){
                     ?>
@@ -90,7 +104,13 @@ function affiche($id){
               
               ?>
               </td>
-              <td><a href="<?=$path_file ."/" . $fichier -> nom ?>"> <?= $fichier -> nom; ?> </td>
+              <?php  
+              $nom = $fichier -> nom;
+              if (strlen($nom) > 10) {
+                  $nom = substr($nom, 0, 10);
+              }
+              ?>
+              <td><a href="<?=$path_file ."/" . $fichier -> nom ?>"> <?= $nom; ?> </td>
                   
               <td><?=$date;?></td>
                   
@@ -102,18 +122,30 @@ function affiche($id){
               }
               }
               ?>   
-              </table>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </div>
               <?php           
           } 
 
 function boutonAJout(){
   ?>
-  <div class= "container-fluid bg-secondary border border-rounded text-center" >
-  <form method="post" action="ajout.php" enctype="multipart/form-data">
-    <input type="file" name="monfichier" /><br/>
-    <input class="btn btn-lg btn-sm btn-secondary text-center" type ="submit" value ="Envoyer le fichier">
-  </form>
-  </div>
+
+  <div class="card my-4">
+          <div class="card-body">
+            <h5 class="card-title">Télécharger un fichier</h5>
+            <form method="post" action="ajout.php" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="fileInput" class="form-label">Sélectionner un fichier</label>
+                <input class="form-control" type="file" name="monfichier" id="fileInput">
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
+        </div>
   <?php
 }
 
@@ -121,5 +153,30 @@ function boutonAJout(){
   </table>
   <?php
 ?>
+  <script>
+function showHint(str) {
+  if (str.length == 0) {
+    loadAllFiles();
+    return;
+  } else {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  xmlhttp.open("GET", "gethint.php?q=" + str);
+  xmlhttp.send();
+  }
+}
+
+
+function loadAllFiles() {
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.onload = function() {
+    document.getElementById("txtHint").innerHTML = this.responseText;
+  }
+  xmlhttp.open("GET", "ajoutTousLesFichiers.php", true); // Endpoint pour charger tous les fichiers
+  xmlhttp.send();
+}
+</script>
 </body>
 </html>
