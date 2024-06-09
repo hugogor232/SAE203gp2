@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 session_start();
 include ('functions.php');
@@ -8,11 +9,16 @@ genererNavigation();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 <!-- login.php -->
 
 <?php
 session_start();
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +28,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -56,6 +63,8 @@ session_start();
     </div>
 
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -90,7 +99,10 @@ session_start();
             <a href="index.php" class="btn btn-primary">Revenir a la page d'accuil</a>
         </form>
     </div>
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 </body>
 
 </html>

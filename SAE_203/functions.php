@@ -10,6 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
 function genererHeader()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (isset($_SESSION['email'])) {
         $json_data = file_get_contents('./data/users.json');
         $users = json_decode($json_data, true);
@@ -20,6 +21,8 @@ function genererHeader()
             foreach ($users as $user) {
                 if ($user['email'] === $email) {
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     if (isset($_SESSION['pseudo'])) {
         $json_data = file_get_contents('./data/utilisateurs.json');
 
@@ -30,7 +33,10 @@ function genererHeader()
             $currentUser = null;
             foreach ($users as $user) {
                 if ($user['utilisateur'] === $pseudo) {
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                     $currentUser = $user;
                     break;
                 }
@@ -38,16 +44,22 @@ function genererHeader()
 
             if ($currentUser !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $prenom = $currentUser['prenom'];
                 $nom = $currentUser['nom'];
                 $adresse = $currentUser['adresse'];
                 $telephone = $currentUser['telephone'];
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                 $email = $currentUser['email'];
                 $vehicle = $currentUser['vehicule'];
 
 
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
                 // Modifier les classes Bootstrap
                 echo '<header class="jumbotron bg-white">';
@@ -57,10 +69,14 @@ function genererHeader()
                 echo '<div class="col-md-6"><h1 class="display-4">Site de Location de Voitures</h1></div>';
                 echo '<div class="col-md-3 text-end">';
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo '<h3 class="mb-0">Bienvenue, ' . $prenom . ' ' . $nom . '</h3>';
 =======
                 echo '<h3 class="mb-0">Bienvenue, ' . $pseudo . '</h3>';
 >>>>>>> origin/main
+=======
+                echo '<h3 class="mb-0">Bienvenue, ' . $pseudo . '</h3>';
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                 echo '<a href="logout.php" class="btn btn-dark me-3">Se déconnecter</a>';
                 echo '<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">Mon Profil</button>';
                 echo '</div>';
@@ -68,6 +84,7 @@ function genererHeader()
                 echo '</div>';
                 echo '</header>';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 // Affiche le formulaire de modification de profil dans un offcanvas
                 echo '
@@ -161,6 +178,8 @@ function modifProfil()
                         $user['password'] = $password;
                     }
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
                 // Affiche le formulaire de modification de profil dans un offcanvas
                 echo '
@@ -228,22 +247,30 @@ function modifProfil()
                     $user['email'] = $_POST['email'];
                     $user['motdepasse'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
                     $user['vehicule'] = $_POST['vehicle'];
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                     break;
                 }
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             file_put_contents('./data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 =======
             file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
 >>>>>>> origin/main
+=======
+            file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
             header('Location: profil.php');
             exit;
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     $json_data = file_get_contents('./data/users.json');
@@ -257,6 +284,8 @@ function modifProfil()
             $adresse = $user['adresse'];
             $telephone = $user['telephone'];
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     $json_data = file_get_contents('./data/utilisateurs.json');
     $users = json_decode($json_data, true);
 
@@ -264,7 +293,10 @@ function modifProfil()
         if ($user['utilisateur'] === $pseudo) {
             $email = $user['email'];
             $vehicle = $user['vehicule'];
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
             break;
         }
     }
@@ -272,11 +304,14 @@ function modifProfil()
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 // Partie Navbar
 function genererNavigation()
 {
@@ -312,16 +347,21 @@ function genererNavigation()
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Partie Login
 =======
 // Partie Navbar
 >>>>>>> origin/main
+=======
+// Partie Navbar
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 function genererLogin()
 {
     // Initialisation de la variable d'erreur
     $erreur_message = '';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (isset($_POST['email']) && isset($_POST['password'])) {
             $json_data = file_get_contents('./data/users.json');
@@ -336,6 +376,8 @@ function genererLogin()
                     $_SESSION['role'] = $user['role'];
 
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
         if (isset($_POST['pseudo']) && isset($_POST['password'])) {
             $json_data = file_get_contents('./data/utilisateurs.json');
             $users = json_decode($json_data, true);
@@ -352,7 +394,10 @@ function genererLogin()
                     setcookie('pseudo', $user['utilisateur'], time() + (86400 * 30), "/"); // Cookie valable pendant 30 jours
                     setcookie('role', $user['role'], time() + (86400 * 30), "/"); // Cookie valable pendant 30 jours
 
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                     if ($_SESSION['role'] === 'admin') {
                         header('Location: administrer.php');
                     } else {
@@ -368,10 +413,15 @@ function genererLogin()
     if (isset($_POST['logout'])) {
         session_destroy();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         setcookie('pseudo', '', time() - 3600, "/");
         setcookie('role', '', time() - 3600, "/");
 >>>>>>> origin/main
+=======
+        setcookie('pseudo', '', time() - 3600, "/");
+        setcookie('role', '', time() - 3600, "/");
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
         header('Location: index.php');
         exit;
     }
@@ -388,12 +438,17 @@ function genererLogin()
                 <form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post">
                     <div class="mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <label for="email" class="form-label">email :</label>
                         <input type="text" class="form-control" id="email" name="email" required>
 =======
                         <label for="pseudo" class="form-label">Pseudo :</label>
                         <input type="text" class="form-control" id="pseudo" name="pseudo" required>
 >>>>>>> origin/main
+=======
+                        <label for="pseudo" class="form-label">Pseudo :</label>
+                        <input type="text" class="form-control" id="pseudo" name="pseudo" required>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Mot de passe :</label>
@@ -433,6 +488,7 @@ function genererLogin()
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function genererInscription()
 {
@@ -444,6 +500,8 @@ function genererInscription()
 
         if (empty($password) || empty($email)) {
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 function genererInscription()
 {
     $error_message = '';
@@ -455,11 +513,15 @@ function genererInscription()
         $email = $_POST['email'];
 
         if (empty($pseudo) || empty($password) || empty($vehicle) || empty($email)) {
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
             $error_message = "Veuillez remplir tous les champs.";
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error_message = "Adresse email invalide.";
         } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
             $json_data = file_get_contents('./data/users.json');
             $users = json_decode($json_data, true);
@@ -468,6 +530,8 @@ function genererInscription()
                 if ($user['email'] === $email) {
                     $error_message = "Cet email est déjà utilisé.";
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
             $json_data = file_get_contents('./data/utilisateurs.json');
             $users = json_decode($json_data, true);
@@ -475,13 +539,17 @@ function genererInscription()
             foreach ($users as $user) {
                 if ($user['utilisateur'] === $pseudo) { // Pseudo déjà utilisé
                     $error_message = "Ce pseudo est déjà utilisé.";
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                     break;
                 }
             }
 
             if (empty($error_message)) {
                 $new_user = array(
+<<<<<<< HEAD
 <<<<<<< HEAD
                     'prenom' => $_POST['prenom'],
                     'nom' => $_POST['nom'],
@@ -496,6 +564,8 @@ function genererInscription()
 
                 file_put_contents('./data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                     'utilisateur' => $pseudo,
                     'motdepasse' => $hashed_password,
                     'vehicule' => $vehicle,
@@ -505,7 +575,10 @@ function genererInscription()
                 $users[] = $new_user;
 
                 file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
                 header('Location: inscription_success.php');
                 exit;
@@ -517,9 +590,12 @@ function genererInscription()
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 // Partie en bas
 function genererFooter()
 {
@@ -557,10 +633,14 @@ function genererFooter()
     echo '<a href="https://www.toyota.fr/"><img src="./images/Logo_partenariat/toyota.png" alt="Toyota" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo '</div>';
 =======
     echo '</div>'; // fin de la première ligne de partenaires
 >>>>>>> origin/main
+=======
+    echo '</div>'; // fin de la première ligne de partenaires
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
     // Deuxième ligne de partenaires
     echo '<div class="row justify-content-center py-5">';
@@ -569,15 +649,20 @@ function genererFooter()
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo '<a href="https://www.opel.fr/"><img src="./images/Logo_partenariat/opel.png" alt="opel" class="img-fluid" style="width: 50%;"></a>';
 =======
     echo '<a href="https://www.opel.fr/"><img src="./images/Logo_partenariat/Opel.png" alt="opel" class="img-fluid" style="width: 50%;"></a>';
 >>>>>>> origin/main
+=======
+    echo '<a href="https://www.opel.fr/"><img src="./images/Logo_partenariat/Opel.png" alt="opel" class="img-fluid" style="width: 50%;"></a>';
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
     echo '<a href="https://www.citroen.fr/"><img src="./images/Logo_partenariat/citroen.png" alt="citroen" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
+<<<<<<< HEAD
 <<<<<<< HEAD
     echo '<a href="https://www.honda.fr/"><img src="./images/Logo_partenariat/honda.png" alt="honda" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
@@ -590,6 +675,8 @@ function genererFooter()
     echo '</div>';
     echo '</div>';
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     echo '<a href="https://www.honda.fr/"><img src="./images/Logo_partenariat/Honda.png" alt="honda" class="img-fluid" style="width: 50%;"></a>';
     echo '</div>';
     echo '<div class="col-md-2 text-center mb-3">';
@@ -601,7 +688,10 @@ function genererFooter()
     echo '</div>'; // fin de la deuxième ligne de partenaires
 
     echo '</div>'; // fin de la section des partenaires
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
     // À propos
     echo '<div class="row p-5">';
@@ -632,18 +722,24 @@ function genererFooter()
     echo '</div>';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo '</div>';
     echo '</div>';
 =======
     echo '</div>'; // fin de la section À propos, Contact, Réseaux sociaux
     echo '</div>'; // fin de la div container
 >>>>>>> origin/main
+=======
+    echo '</div>'; // fin de la section À propos, Contact, Réseaux sociaux
+    echo '</div>'; // fin de la div container
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
     // Droits d'auteur
     echo '<div class="copyright bg-dark text-white text-center py-2">';
     echo '<div class="container">';
     echo '<p class="mb-0">&copy; ' . date("Y") . ' Vroumvroumloc - Tous droits réservés</p>';
     echo '</div>';
+<<<<<<< HEAD
 <<<<<<< HEAD
     echo '</div>';
     echo '</footer>';
@@ -652,6 +748,11 @@ function genererFooter()
 
     echo '</footer>'; // fin du footer
 >>>>>>> origin/main
+=======
+    echo '</div>'; // fin de la section droits d'auteur
+
+    echo '</footer>'; // fin du footer
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 }
 
 
@@ -661,10 +762,14 @@ function genererFooter()
 function administrer()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $json_data = file_get_contents('./data/users.json');
 =======
     $json_data = file_get_contents('./data/utilisateurs.json');
 >>>>>>> origin/main
+=======
+    $json_data = file_get_contents('./data/utilisateurs.json');
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     $users = json_decode($json_data, true);
 
     if (isset($_POST['search'])) {
@@ -690,27 +795,37 @@ function administrer()
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         file_put_contents('./data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 =======
         file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
 >>>>>>> origin/main
+=======
+        file_put_contents('./data/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
         header('Location: administrer.php');
         exit;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     foreach ($filtered_users as $key => $user): ?>
         <tr>
             <td>
                 <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
     foreach ($filtered_users as $key => $user): ?>
         <tr>
             <td>
                 <?php echo $user['utilisateur']; ?>
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
             </td>
             <td>
                 <?php echo $user['email']; ?>
@@ -725,10 +840,14 @@ function administrer()
                     <select name="nouveau_role" class="form-select d-inline me-2">
                         <option value="admin">Administrateur</option>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <option value="utilisateur">Utilisateur</option>
 =======
                         <option value="user">Utilisateur</option>
 >>>>>>> origin/main
+=======
+                        <option value="user">Utilisateur</option>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                         <option value="modo">Modérateur</option>
                         <option value="visitor">Visiteur</option>
                     </select>
@@ -749,8 +868,12 @@ function administrer()
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ?>
 =======
 ?>
 >>>>>>> origin/main
+=======
+?>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<<< HEAD:SAE_203/index.php
+<<<<<<< HEAD
+<<<<<<<< HEAD:SAE_203/index.php
 <<<<<<<< HEAD:SAE_203/index.php
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -21,9 +25,12 @@
 
     <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
     session_start();
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     include ('functions.php');
     genererHeader();
     ?>
@@ -42,10 +49,14 @@
                     <p class="lead">Louez des véhicules pour tous vos déplacements.</p>
                     <?php genererLogin(); ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <?php if (isset($_SESSION['email'])): ?>
 =======
                     <?php if (isset($_SESSION['pseudo'])): ?>
 >>>>>>> origin/main
+=======
+                    <?php if (isset($_SESSION['pseudo'])): ?>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                         <a href="ajout_annonce.php" class="btn btn-lg btn-primary rounded-pill">Réserver un véhicule</a>
                     <?php else: ?>
                         <p class="mt-3">Connectez-vous pour réserver un véhicule.</p>
@@ -63,9 +74,13 @@
 
     <div class="theme" onclick="toggleTheme()">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/main
+=======
+
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
         <!-- Menu déroulant -->
         <div class="offcanvas offcanvas-end bg-light text-light" id="barre">
             <div class="container-fluid bg-dark text-dark py-2">
@@ -73,10 +88,14 @@
                     <ul class="nav flex-column">
                         <!-- Afficher les éléments du menu en fonction de l'état de connexion -->
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <?php if (isset($_SESSION['email'])): ?>
 =======
                         <?php if (isset($_SESSION['pseudo'])): ?>
 >>>>>>> origin/main
+=======
+                        <?php if (isset($_SESSION['pseudo'])): ?>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                             <li class="nav-item">
                                 <a href="profil.php" class="btn btn-outline-light w-100 mb-2">
                                     <i class="fas fa-user fa-lg me-2"></i> Profile
@@ -193,10 +212,14 @@
                     </div>
                     <div class="carousel-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="./images/Voiture5.jpg" alt="Peugot" class="d-block w-100">
 =======
                         <img src="./images/voiture5.jpg" alt="Peugot" class="d-block w-100">
 >>>>>>> origin/main
+=======
+                        <img src="./images/voiture5.jpg" alt="Peugot" class="d-block w-100">
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Peugot E-3008</h3>
                             <p>Apprenez à connaître Peugot</p>
@@ -211,10 +234,14 @@
                     </div>
                     <div class="carousel-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="./images/Voiture6.jpg" alt="Peugot" class="d-block w-100">
 =======
                         <img src="./images/voiture6.jpg" alt="Peugot" class="d-block w-100">
 >>>>>>> origin/main
+=======
+                        <img src="./images/voiture6.jpg" alt="Peugot" class="d-block w-100">
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Peugot 208 Hybride</h3>
                             <p>Un choix digne pour vous!</p>
@@ -222,10 +249,14 @@
                     </div>
                     <div class="carousel-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="./images/Voiture7.jpg" alt="Peugot" class="d-block w-100">
 =======
                         <img src="./images/voiture7.jpg" alt="Peugot" class="d-block w-100">
 >>>>>>> origin/main
+=======
+                        <img src="./images/voiture7.jpg" alt="Peugot" class="d-block w-100">
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Peugot</h3>
                             <p>Voyager à pleusieurs!</p>
@@ -534,16 +565,24 @@
 
 </html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 ========
 >>>>>>>> origin/main:index.php
+========
+>>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a:index.php
 <?php 
 header('Location: SAE_203/index.php');
 exit;
 ?>
+<<<<<<<< HEAD:SAE_203/index.php
 <<<<<<<< HEAD:SAE_203/index.php
 >>>>>>>> main:index.php
 ========
 >>>>>>>> origin/main:index.php
 =======
 >>>>>>> origin/main
+========
+>>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a:index.php
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a

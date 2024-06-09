@@ -1,6 +1,7 @@
 <?php
 session_start();
 <<<<<<< HEAD
+<<<<<<< HEAD
 include ('functions.php');
 genererInscription();
 
@@ -13,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telephone = $_POST['telephone'];
     $dob = $_POST['dob'];
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 
 if (!isset($_SESSION['pseudo'])) {
     header('Location: login.php');
@@ -60,7 +63,10 @@ foreach ($users as $user) {
         $vehicle = $user['vehicule'];
         break;
     }
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 }
 ?>
 
@@ -71,15 +77,20 @@ foreach ($users as $user) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title>Inscription</title>
 =======
     <title>Profil</title>
 >>>>>>> origin/main
+=======
+    <title>Profil</title>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div class="container mt-5">
         <div class="card">
@@ -129,6 +140,8 @@ foreach ($users as $user) {
                     <a href="index.php" class="btn btn-secondary">Revenir à la page d'accueil</a>
                 </form>
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     <?php include ('functions.php'); ?>
     <?php genererNavigation(); ?>
 
@@ -179,11 +192,15 @@ foreach ($users as $user) {
                 <div class="modal-body">
                     <p>Formulaire de changement d'avatar ici...</p>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
             </div>
         </div>
     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -201,6 +218,9 @@ foreach ($users as $user) {
 =======
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 >>>>>>> origin/main
+=======
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 </body>
 
 </html>

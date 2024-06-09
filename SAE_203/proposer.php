@@ -42,10 +42,14 @@ if (isset($_GET['action']) && $_GET['action'] === 'supprimer_annonce' && isset($
                 echo '<div class="col">';
                 echo '<div class="card" style="width: 400px;">';
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo '<img class="card-img-top" src="./images/logo1.png" alt="logo">';
 =======
                 echo '<img class="card-img-top" src="./images/Covoiturage.png" alt="logo">';
 >>>>>>> origin/main
+=======
+                echo '<img class="card-img-top" src="./images/Covoiturage.png" alt="logo">';
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
                 echo '<div class="card-body">';
                 echo '<h4 class="card-title">' . ucfirst($annonce['Pseudo']) . '</h4>';
                 echo '<h6 class="card-subtitle mb-2">Date : ' . date("d-m-Y H:i", strtotime($annonce['Date'])) . '</h6>';

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 session_start();
 include ('functions.php');
@@ -17,12 +18,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 <!-- inscription.php -->
 
 <?php
 session_start();
 ?>
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -35,6 +41,7 @@ session_start();
 </head>
 
 <body>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div class="container mt-5">
         <div class="card">
@@ -103,6 +110,8 @@ session_start();
 </body>
 
 =======
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
     <?php include ('functions.php');
     genererNavigation();
     genererInscription(); ?>
@@ -155,5 +164,8 @@ session_start();
     });
 </script>
 
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 7f1f5e98f48e9e4fd9148bb7548b41da1624c57a
 </html>
