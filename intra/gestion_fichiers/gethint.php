@@ -1,8 +1,7 @@
 <?php
 session_start();
 $_SESSION['role'] = 'modo';
-$_SESSION['id'] = 1;
-$groupes = json_decode(file_get_contents("data/fichiers.json"),true);
+$groupes = json_decode(file_get_contents("../data/groupes.json"),true);
 $a = array();
 $b = array();
 $c = array();
@@ -41,8 +40,8 @@ if ($q !== "") {
               </thead>
               <tbody>
 <?php
-$path = "../espace_fichiers/groupes";
-$id = 1;
+$path = "../groupes";
+$id = $_SESSION['id'];
 $path_file = $path . "/" . (string) $id ;
 if ($hint != array()){
 foreach ($hint as $name){

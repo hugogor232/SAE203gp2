@@ -1,7 +1,7 @@
 <?php
 session_start();
-$path = "../espace_fichiers/groupes";
-  $groupes = json_decode(file_get_contents("data/fichiers.json"));?>
+$path = "../groupes";
+  $groupes = json_decode(file_get_contents("../data/groupes.json"));?>
   
   <div class="card">
   <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
@@ -16,7 +16,7 @@ $path = "../espace_fichiers/groupes";
               </thead>
               <tbody>
   <?php
-  $id = 1;
+  $id = $_SESSION['id'];
       $path_file = $path . "/" . (string) $id ;
 
       foreach ($groupes as $groupe){

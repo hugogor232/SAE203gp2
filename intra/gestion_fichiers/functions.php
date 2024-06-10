@@ -1,7 +1,8 @@
 <?php session_start();
 $_SESSION['role'] = "modo";
-$_SESSION['id'] = 1;
-
+if (isset($_GET["idgrp"])){
+  $_SESSION['id'] = $_GET["idgrp"];
+}
 ?>
 <!doctype html>
 <html lang="fr">
@@ -43,8 +44,8 @@ function navbar(){
 } */
 
 function affiche($id){
-  $path = "../espace_fichiers/groupes";
-  $groupes = json_decode(file_get_contents("data/fichiers.json"));?>
+  $path = "../groupes";
+  $groupes = json_decode(file_get_contents("../data/groupes.json"));?>
   
   <div class="card">
           <div class="card-body">
@@ -64,7 +65,7 @@ function affiche($id){
               </thead>
               <tbody>
   <?php
-  $id = 1;
+  $id = $_SESSION['id'];
       $path_file = $path . "/" . (string) $id ;
 
       foreach ($groupes as $groupe){
