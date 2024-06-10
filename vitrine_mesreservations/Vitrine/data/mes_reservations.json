@@ -1,0 +1,43 @@
+[
+    {
+        "email": "haziz@gmail.com",
+        "voiture": {
+            "marque": "Toyota",
+            "modele": "Corolla",
+            "prix": 30,
+            "annee": 2022,
+            "carburant": "Essence",
+            "image": ".\/images\/Voitures\/Toyota Corolla.jpg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-06-28",
+        "date_retour": "2024-06-14"
+    }
+]
