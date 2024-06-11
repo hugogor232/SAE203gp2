@@ -212,21 +212,11 @@
     "21": {
         "prenom": "Lucas",
         "nom": "gilbert",
-        "password": "bonjour1",
+        "password": "bonjour",
         "adresse": "saint",
         "email": "lucas@gmail.com",
         "telephone": "06455",
         "dob": "2005-06-16",
-        "role": "employe"
-    },
-    "23": {
-        "prenom": "lucas",
-        "nom": "gilbert",
-        "password": "bonjour",
-        "adresse": "ok",
-        "email": "lucas2@gmail.com",
-        "telephone": "1566654",
-        "dob": "2024-05-19",
         "role": "employe"
     },
     "24": {
@@ -239,4 +229,5 @@
         "dob": "2001-01-01",
         "role": "utilisateur"
     }
+    
 }

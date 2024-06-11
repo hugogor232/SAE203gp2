@@ -174,8 +174,6 @@ function genererNavigation()
     echo '<ul class="navbar-nav me-auto">';
     echo '<li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>';
     echo '<li class="nav-item"><a class="nav-link" href="proposer.php">Liste des voitures</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="rechercher.php">Chercher une voiture</a></li>';
-
     if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
         echo '<li class="nav-item"><a class="nav-link" href="administrer.php">Administrer</a></li>';
     }
