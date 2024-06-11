@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "nom": "hugo",
+        "description": "groupes pour parler de tout",
+        "droit": "public",
+        "permission": [
+            0
+        ],
+        "fichiers": []
+    },
+    {
+        "id": 2,
+        "nom": "zfzef",
+        "description": "zefez",
+        "droit": "public",
+        "permission": [
+            0
+        ],
+        "fichiers": [
+            {
+                "nom": "sae203_2324_td1_langages_dg.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nom": "test",
+        "droit": "public",
+        "description": "test",
+        "permission": [
+            0
+        ],
+        "fichiers": [
+            {
+                "nom": "sae203_2324_td1_langages_dg.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nom": "erhreh",
+        "droit": "public",
+        "description": "fgg",
+        "permission": [
+            1
+        ],
+        "fichiers": []
+    }
+]

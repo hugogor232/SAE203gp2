@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "nom": "",
+        "droit": "public",
+        "description": "",
+        "permission": [],
+        "fichiers": []
+    },
+    {
+        "id": 2,
+        "nom": "sae",
+        "droit": "public",
+        "description": "test",
+        "permission": [
+            0
+        ],
+        "fichiers": [
+            {
+                "nom": "Baccalauréat_général_Solaymane_ELKALDAOUI-1-1.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            },
+            {
+                "nom": "sae203_2324_td1_langages_dg-1.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            },
+            {
+                "nom": "sae203_2324_td3_serveurs_dg.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            },
+            {
+                "nom": "sae203_2324_cahierdescharges_fi1-1.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            },
+            {
+                "nom": "test1.txt",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            },
+            {
+                "nom": "TD2_R208_instanceof_Transtypage_Abstract_Interface_23_24.pdf",
+                "date": "10\/06\/2024",
+                "auteur": "Rahmi"
+            }
+        ]
+    }
+]
