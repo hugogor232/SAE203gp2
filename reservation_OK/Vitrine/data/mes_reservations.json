@@ -1,0 +1,236 @@
+[
+    {
+        "email": "jjacques@example.com",
+        "voiture": {
+            "marque": "Mercedes-Benz",
+            "modele": "Classe C",
+            "prix": 50,
+            "annee": 2023,
+            "carburant": "Hybride",
+            "image": ".\/images\/Voitures\/Mercedes-Benz Classe C.jpg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-06-13",
+        "date_retour": "2024-06-21",
+        "lieu_recuperation": "Saint-Malo",
+        "lieu_retour": "Rennes"
+    },
+    {
+        "email": "jjacques@example.com",
+        "voiture": {
+            "marque": "Mercedes-Benz",
+            "modele": "Classe C",
+            "prix": 50,
+            "annee": 2023,
+            "carburant": "Hybride",
+            "image": ".\/images\/Voitures\/Mercedes-Benz Classe C.jpg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-06-20",
+        "date_retour": "2024-06-27",
+        "lieu_recuperation": "Nice",
+        "lieu_retour": "Saint-Malo"
+    },
+    {
+        "email": "user@gmail.com",
+        "voiture": {
+            "marque": "Ford",
+            "modele": "Mustang",
+            "prix": 60,
+            "annee": 2022,
+            "carburant": "Essence",
+            "image": ".\/images\/Voitures\/Ford Mustang.jpg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-06-12",
+        "date_retour": "2024-06-19",
+        "lieu_recuperation": "Bordeaux",
+        "lieu_retour": "Saint-Malo"
+    },
+    {
+        "email": "user@gmail.com",
+        "voiture": {
+            "marque": "Chevrolet",
+            "modele": "Camaro",
+            "prix": 65,
+            "annee": 2021,
+            "carburant": "Essence",
+            "image": ".\/images\/Voitures\/Chevrolet Camaro.jpg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-07-04",
+        "date_retour": "2024-06-23",
+        "lieu_recuperation": "Marseille",
+        "lieu_retour": "Rouen"
+    },
+    {
+        "email": "user@gmail.com",
+        "voiture": {
+            "marque": "Audi",
+            "modele": "A4",
+            "prix": 42,
+            "annee": 2022,
+            "carburant": "Essence",
+            "image": ".\/images\/Voitures\/Audi A4.jpg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-06-22",
+        "date_retour": "2024-06-27",
+        "lieu_recuperation": "Marseille",
+        "lieu_retour": "Nice"
+    },
+    {
+        "email": "user@gmail.com",
+        "voiture": {
+            "marque": "Tesla",
+            "modele": "Model 3",
+            "prix": 55,
+            "annee": 2023,
+            "carburant": "\u00c9lectrique",
+            "image": ".\/images\/Voitures\/Tesla Model 3.jpeg",
+            "lieu_recuperation": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ],
+            "lieu_retour": [
+                "Paris",
+                "Rennes",
+                "Caen",
+                "Nantes",
+                "Toulouse",
+                "Bordeaux",
+                "Lyon",
+                "Rouen",
+                "Lille",
+                "Marseille",
+                "Nice",
+                "Saint-Malo"
+            ]
+        },
+        "date_recuperation": "2024-06-13",
+        "date_retour": "2024-06-27",
+        "lieu_recuperation": "Paris",
+        "lieu_retour": "Paris"
+    }
+]
