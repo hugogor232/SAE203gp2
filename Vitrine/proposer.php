@@ -1,19 +1,14 @@
-<!-- proposer.php -->
-
 <?php
-// Vérifier si la session n'est pas déjà démarrée
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['email'])) {
-    // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
     header('Location: login.php');
     exit;
 }
 
-// Lire le fichier JSON
+
 $json_data = file_get_contents('./data/voitures.json');
 $voitures = json_decode($json_data, true);
 
@@ -37,6 +32,15 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
     });
 }
 
+
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin' && isset($_POST['action']) && $_POST['action'] === 'supprimer_voiture' && isset($_POST['voiture_id'])) {
+    $voiture_id = $_POST['voiture_id'];
+    if (isset($voitures[$voiture_id])) {
+        unset($voitures[$voiture_id]);
+        file_put_contents('./data/voitures.json', json_encode($voitures));
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +52,6 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
     <title>Proposer des Voitures à Louer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -94,8 +97,8 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
                 </div>
                 <div class="col-xl-2 col-lg-4 col-md-6">
                     <label for="heure_retour" class="form-label">Heure de retour</label>
-                    <input id="heure_retour" type="time
-                     class=" form-control" placeholder="Heure de retour" aria-label="Heure de retour">
+                    <input id="heure_retour" type="time" class="form-control placeholder=" Heure de retour"
+                        aria-label="Heure de retour">
                 </div>
                 <div class="col-xl-2 col-lg-4 col-md-6">
                     <label for="submit" class="form-label">&nbsp;</label>
@@ -105,7 +108,6 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
         </div>
     </div>
 
-    <!-- Contenu de la page -->
     <div class="container mt-5">
         <h1 class="text-center mb-5">Nos Voitures à Louer</h1>
         <div class="row">
@@ -160,7 +162,7 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
             <!-- Offres de voitures -->
             <div class="col-md-9">
                 <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <?php foreach ($voitures as $voiture): ?>
+                    <?php foreach ($voitures as $voiture_id => $voiture): ?>
                         <div class="col">
                             <div class="card h-100 border-0 shadow-lg card-hover"
                                 style="border-radius: 15px; transition: background-color 1s, color 1s;">
@@ -179,12 +181,20 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
                                         <li class="card-text"><strong>Carburant :</strong>
                                             <?php echo htmlspecialchars($voiture['carburant']); ?></li>
                                     </ul>
-                                    <?php if (isset($_SESSION['email'])): ?>
+                                    <?php if (isset($_SESSION['email']) && isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                                        <a href="reservation.php?voiture=<?php echo urlencode($voiture['marque'] . ' ' . $voiture['modele']); ?>"
+                                            class="btn btn-dark btn-sm fw-bold">Réserver</a>
+                                        <form method="POST">
+                                            <input type="hidden" name="action" value="supprimer_voiture">
+                                            <input type="hidden" name="voiture_id" value="<?php echo $voiture_id; ?>">
+                                            <button type="submit" class="btn btn-outline-danger"><i
+                                                    class="fas fa-trash-alt me-1"></i>Supprimer</button>
+                                        </form>
+                                    <?php elseif (isset($_SESSION['email'])): ?>
                                         <a href="reservation.php?voiture=<?php echo urlencode($voiture['marque'] . ' ' . $voiture['modele']); ?>"
                                             class="btn btn-dark btn-sm fw-bold">Réserver</a>
                                     <?php else: ?>
-                                        <a href="login.php" class="btn btn-dark btn-sm fw-bold">Connectez-vous pour
-                                            réserver</a>
+                                        <a href="login.php" class="btn btn-dark btn-sm fw-bold">Connectez-vous pour réserver</a>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -193,27 +203,30 @@ if (isset($_GET['marque']) || isset($_GET['prix']) || isset($_GET['carburant']))
                 </div>
             </div>
 
+
         </div>
     </div>
 
     <script>
-        document.querySelectorAll('.card-hover').forEach(function (card) {
+        document.querySelectorAll('.card-hover').forEach(function (card)) {
             card.addEventListener('mouseenter', function () {
                 card.style.backgroundColor = '#222';
                 card.style.color = '#fff';
                 setTimeout(function () {
                     card.style.transition = 'background-color 0.5s, color 0.5s';
-                }, 5); // Delay for smoother transition
+                }, 5);
             });
 
-            card.addEventListener('mouseleave', function () {
-                card.style.backgroundColor = '';
-                card.style.color = '';
-                setTimeout(function () {
-                    card.style.transition = 'background-color 0.5s, color 0.5s';
-                }, 5); // Delay for smoother transition
-            });
-        });
+            card.addEventdocument.querySelectorAll('.card-hover').forEach(function (card) {
+                card.addEventListener('mouseleave', function () {
+                    card.style.backgroundColor = '';
+                    card.style.color = '';
+                    setTimeout(function () {
+                        card.style.transition = 'background-color 0.5s, color 0.5s';
+                    }, 5);
+                });
+            })
+        };
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
