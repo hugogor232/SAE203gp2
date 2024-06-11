@@ -40,7 +40,10 @@
                     <p class="lead">Louez des véhicules pour tous vos déplacements.</p>
                     <?php genererLogin(); ?>
                     <?php if (isset($_SESSION['email'])): ?>
-                        <a href="ajout_annonce.php" class="btn btn-lg btn-primary rounded-pill">Réserver un véhicule</a>
+                        <a href="mes_reservations.php" class="btn btn-lg btn-primary rounded-pill">Mes réservations</a>
+                        <a href="proposer.php" class="btn btn-lg btn-primary rounded-pill">Réserver un véhicule</a>
+                        <a href="ajout_annonce.php" class="btn btn-lg btn-primary rounded-pill">Ajouter une annonce</a>
+
                     <?php else: ?>
                         <p class="mt-3">Connectez-vous pour réserver un véhicule.</p>
                     <?php endif; ?>

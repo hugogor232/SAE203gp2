@@ -8,13 +8,17 @@
 </head>
 <body>
     <?php navbar();?>
-    <div class="container-fluid">
-    <?php affiche(12);
+    <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="text-center">Groupe de Partage de Fichiers</h1>
+    <?php  boutonAJout();
     ?> 
-    </div>
     <?php
-    boutonAJout();
+   affiche(12);
     ?>
     </div>
+
+    
 </body>
 </html>

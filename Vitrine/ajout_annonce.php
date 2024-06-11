@@ -1,29 +1,47 @@
-<!-- ajout-annonces.php -->
-
 <?php
-$annonces_json = file_get_contents('./data/annonces.json');
-$annonces = json_decode($annonces_json, true);
+session_start();
 
+// Vérifiez si l'utilisateur est connecté
+if (!isset($_SESSION['email'])) {
+    header('Location: login.php');
+    exit();
+}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Fonction pour ajouter une voiture
+function ajouterVoiture($nouvelle_voiture)
+{
+    $json_data = file_get_contents('./data/voitures.json');
+    $voitures = json_decode($json_data, true);
+    $voitures[] = $nouvelle_voiture;
 
-    $new_annonce = array(
-        'Pseudo' => $_POST['pseudo'],
-        'Date' => $_POST['date_depart'] . ' ' . $_POST['heure'],
-        'Depart' => $_POST['ville_depart'],
-        'Arrivee' => $_POST['ville_arrivee'],
-        'Places' => $_POST['places_disponibles'],
-        'Commentaire' => $_POST['commentaire'],
-        'id' => uniqid()
+    file_put_contents('./data/voitures.json', json_encode($voitures, JSON_PRETTY_PRINT));
+}
 
-    );
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $marque = $_POST['marque'];
+    $modele = $_POST['modele'];
+    $prix = $_POST['prix'];
+    $annee = $_POST['annee'];
+    $carburant = $_POST['carburant'];
+    $image = $_POST['image'];
+    $lieu_recuperation = explode(',', $_POST['lieu_recuperation']);
+    $lieu_retour = explode(',', $_POST['lieu_retour']);
 
-    $annonces[] = $new_annonce;
+    $nouvelle_voiture = [
+        'marque' => $marque,
+        'modele' => $modele,
+        'prix' => (int) $prix,
+        'annee' => (int) $annee,
+        'carburant' => $carburant,
+        'image' => $image,
+        'lieu_recuperation' => array_map('trim', $lieu_recuperation),
+        'lieu_retour' => array_map('trim', $lieu_retour)
+    ];
 
-    file_put_contents('./data/annonces.json', json_encode($annonces));
-    $annonce_success = true;
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit;
+    ajouterVoiture($nouvelle_voiture);
+
+    header('Location: proposer.php');
+    exit();
 }
 ?>
 
@@ -33,51 +51,67 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter une annonce</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Ajouter une Annonce de Voiture</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <?php include ('functions.php'); ?>
+    <?php include ('functions.php');
+    genererHeader(); ?>
     <?php genererNavigation(); ?>
+
     <div class="container mt-5">
+        <h1 class="text-center mb-5">Ajouter une Annonce de Voiture</h1>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header bg-dark text-white">Ajouter une annonce</div>
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Nouvelle Voiture</h5>
+                    </div>
                     <div class="card-body">
-                        <form method="post">
+                        <form method="POST" action="ajout_annonce.php">
                             <div class="mb-3">
-                                <label for="pseudo" class="form-label">Pseudo</label>
-                                <input type="text" class="form-control" id="pseudo" name="pseudo" required>
+                                <label for="marque" class="form-label">Marque</label>
+                                <input type="text" id="marque" name="marque" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="date_depart" class="form-label">Date de départ</label>
-                                <input type="date" class="form-control" id="date_depart" name="date_depart" required>
+                                <label for="modele" class="form-label">Modèle</label>
+                                <input type="text" id="modele" name="modele" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="heure" class="form-label">Heure</label>
-                                <input type="time" class="form-control" id="heure" name="heure" required>
+                                <label for="prix" class="form-label">Prix (€/heure)</label>
+                                <input type="number" id="prix" name="prix" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="ville_depart" class="form-label">Ville de départ</label>
-                                <input type="text" class="form-control" id="ville_depart" name="ville_depart" required>
+                                <label for="annee" class="form-label">Année</label>
+                                <input type="number" id="annee" name="annee" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="ville_arrivee" class="form-label">Ville d'arrivée</label>
-                                <input type="text" class="form-control" id="ville_arrivee" name="ville_arrivee"
+                                <label for="carburant" class="form-label">Type de Carburant</label>
+                                <select id="carburant" name="carburant" class="form-select" required>
+                                    <option value="Essence">Essence</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Électrique">Électrique</option>
+                                    <option value="Hybride">Hybride</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="file" class="form-label">Téléverser une Image :</label>
+                                <input class="form-control" type="file" id="file" name="file">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lieu_recuperation" class="form-label">Lieux de Récupération (séparés par des
+                                    virgules)</label>
+                                <input type="text" id="lieu_recuperation" name="lieu_recuperation" class="form-control"
                                     required>
                             </div>
                             <div class="mb-3">
-                                <label for="places_disponibles" class="form-label">Places disponibles</label>
-                                <input type="number" class="form-control" id="places_disponibles"
-                                    name="places_disponibles" required>
+                                <label for="lieu_retour" class="form-label">Lieux de Retour (séparés par des
+                                    virgules)</label>
+                                <input type="text" id="lieu_retour" name="lieu_retour" class="form-control" required>
                             </div>
-                            <div class="mb-3">
-                                <label for="commentaire" class="form-label">Commentaire</label>
-                                <textarea class="form-control" id="commentaire" name="commentaire" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-dark">Ajouter l'annonce</button>
+                            <button type="submit" class="btn btn-dark w-100">Ajouter</button>
                         </form>
                     </div>
                 </div>
@@ -85,7 +119,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

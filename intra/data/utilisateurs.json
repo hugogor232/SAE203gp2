@@ -1,5 +1,6 @@
-{
-    "0": {
+[
+    {
+        "id":"0",
         "prenom": "Sophie",
         "nom": "Leclerc",
         "password": "Sophie123",
@@ -7,9 +8,11 @@
         "email": "s.leclerc@example.com",
         "telephone": "06.12.34.56.78",
         "dob": "1985-02-14",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "1": {
+    {
+        "id":"1",
         "prenom": "Thomas",
         "nom": "Dubois",
         "password": "Dubois789",
@@ -17,9 +20,11 @@
         "email": "thomas_d@example.com",
         "telephone": "01.23.45.67.89",
         "dob": "1992-03-18",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "2": {
+    {
+        "id":"2",
         "prenom": "Marie",
         "nom": "Lefevre",
         "password": "MarieLef",
@@ -27,9 +32,11 @@
         "email": "marie78@example.com",
         "telephone": "06.98.76.54.32",
         "dob": "1980-11-03",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "3": {
+    {
+        "id":"3",
         "prenom": "Philippe",
         "nom": "Rousseau",
         "password": "PhilRouss",
@@ -37,9 +44,11 @@
         "email": "philippe_rousseau@example.com",
         "telephone": "02.34.56.78.90",
         "dob": "1976-04-22",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "4": {
+    {
+        "id":"4",
         "prenom": "Julie",
         "nom": "Martin",
         "password": "JulieM123",
@@ -47,9 +56,11 @@
         "email": "julie.m@example.com",
         "telephone": "07.65.43.21.09",
         "dob": "1991-09-09",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "5": {
+    {
+        "id":"5",
         "prenom": "Antoine",
         "nom": "Dupont",
         "password": "Antoine456",
@@ -57,9 +68,11 @@
         "email": "antoine.dupont@example.com",
         "telephone": "03.45.67.89.01",
         "dob": "1988-08-07",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "6": {
+    {
+        "id":"6",
         "prenom": "Val\u00e9rie",
         "nom": "Girard",
         "password": "ValGirard2",
@@ -67,9 +80,11 @@
         "email": "val_g@example.com",
         "telephone": "04.56.78.90.12",
         "dob": "1975-01-16",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "7": {
+    {
+        "id":"7",
         "prenom": "Nicolas",
         "nom": "Bertrand",
         "password": "NicoBer",
@@ -77,9 +92,11 @@
         "email": "nicolasb@example.com",
         "telephone": "06.78.90.12.34",
         "dob": "1983-07-25",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "8": {
+    {
+        "id":"8",
         "prenom": "Sandrine",
         "nom": "Leroy",
         "password": "Sandrine67",
@@ -87,9 +104,11 @@
         "email": "sandrine.leroy@example.com",
         "telephone": "01.23.45.67.89",
         "dob": "1977-12-12",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "9": {
+    {
+        "id":"9",
         "prenom": "Guillaume",
         "nom": "Moreau",
         "password": "GuiMore",
@@ -97,9 +116,11 @@
         "email": "guillaume.m@example.com",
         "telephone": "02.34.56.78.90",
         "dob": "1981-05-30",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "10": {
+    {
+        "id":"10",
         "prenom": "Caroline",
         "nom": "Fournier",
         "password": "Caro1234",
@@ -107,9 +128,11 @@
         "email": "caroline_f@example.com",
         "telephone": "03.45.67.89.01",
         "dob": "1984-10-08",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "11": {
+    {
+        "id":"11",
         "prenom": "David",
         "nom": "Martinez",
         "password": "DavidMtz",
@@ -117,9 +140,11 @@
         "email": "david.martinez@example.com",
         "telephone": "04.56.78.90.12",
         "dob": "1974-02-20",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "12": {
+    {
+        "id":"12",
         "prenom": "Christine",
         "nom": "Garcia",
         "password": "ChrisGarc",
@@ -127,9 +152,11 @@
         "email": "christine_g@example.com",
         "telephone": "05.67.89.01.23",
         "dob": "1972-06-15",
-        "role": "utilisateur"
+        "role": "responssable",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "13": {
+    {
+        "id":"13",
         "prenom": "Pierre",
         "nom": "Andr\u00e9",
         "password": "PierreA567",
@@ -137,9 +164,11 @@
         "email": "p.andre@example.com",
         "telephone": "06.78.90.12.34",
         "dob": "1986-11-05",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "14": {
+    {
+        "id":"14",
         "prenom": "Isabelle",
         "nom": "Gauthier",
         "password": "IsaGauth",
@@ -147,9 +176,11 @@
         "email": "isabelle.g@example.com",
         "telephone": "07.89.01.23.45",
         "dob": "1978-04-10",
-        "role": "utilisateur"
+        "role": "rh",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "15": {
+    {
+        "id":"15",
         "prenom": "Marc",
         "nom": "Legrand",
         "password": "MarcLeg",
@@ -157,9 +188,11 @@
         "email": "m.legrand@example.com",
         "telephone": "01.23.45.67.89",
         "dob": "1980-03-25",
-        "role": "utilisateur"
+        "role": "rh",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "16": {
+    {
+        "id":"16",
         "prenom": "C\u00e9line",
         "nom": "Renaud",
         "password": "CelineR321",
@@ -167,9 +200,11 @@
         "email": "celine.renaud@example.com",
         "telephone": "02.34.56.78.90",
         "dob": "1982-08-18",
-        "role": "utilisateur"
+        "role": "rh",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "17": {
+    {
+        "id":"17",
         "prenom": "Jean",
         "nom": "Jacques",
         "password": "JeanJ456",
@@ -177,9 +212,11 @@
         "email": "jjacques@example.com",
         "telephone": "03.45.67.89.01",
         "dob": "1976-01-09",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "18": {
+    {
+        "id":"18",
         "prenom": "Nathalie",
         "nom": "Mercier",
         "password": "NathMerc",
@@ -187,47 +224,31 @@
         "email": "nathalie.mercier@example.com",
         "telephone": "04.56.78.90.12",
         "dob": "1979-09-14",
-        "role": "utilisateur"
+        "role": "ouvrier",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "19": {
+    {
+        "id":"19",
         "prenom": "Haziz",
         "nom": "SHEHU",
         "password": "h",
         "adresse": "16 Rue de la Libert\u00e9",
         "email": "haziz@gmail.com",
-        "telephone": "04.56.78.90.11",
+        "telephone": "04.56.78.90.13",
         "dob": "1979-09-14",
-        "role": "admin"
+        "role": "responssable",
+        "image": "https://thispersondoesnotexist.com/"
     },
-    "20": {
-        "prenom": "Clement",
-        "nom": "LEROUX",
-        "password": "bonjour",
-        "adresse": "5 rue de la rue",
-        "email": "clement@gmail.com",
-        "telephone": "04.56.78.55.13",
-        "dob": "1979-10-14",
-        "role": "employe"
-    },
-    "21": {
-        "prenom": "Lucas",
-        "nom": "gilbert",
-        "password": "bonjour",
-        "adresse": "saint",
-        "email": "lucas@gmail.com",
-        "telephone": "06455",
-        "dob": "2005-06-16",
-        "role": "employe"
-    },
-    "24": {
+    {
+        "id":"20",
         "prenom": "User",
         "nom": "USER",
-        "password": "bonjour",
-        "adresse": "16 Rue de la Liberte",
+        "password": "$2y$10$KEm2KSAk87jXIctxWEemQu\/ugOZEF62eduw7WWBZI.d1ydkbO5R1.",
+        "adresse": "1 Boulevard de Luxembourg",
         "email": "user@gmail.com",
-        "telephone": "04.56.78.90.14",
+        "telephone": "04.56.78.90.13",
         "dob": "2001-01-01",
-        "role": "utilisateur"
+        "role": "responssable",
+        "image": "https://thispersondoesnotexist.com/"
     }
-    
-}
+]
