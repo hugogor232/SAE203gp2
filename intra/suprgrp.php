@@ -6,8 +6,6 @@ header('Location: groupes.php');
 echo '<pre>';
 print_r($lecturejson);
 echo '</pre>';
-print_r($_GET);
-var_dump($_GET);
 rmdir('groupes/'.$_GET["id"]);
 function deleteDirectory($dir) {
         if (!is_dir($dir)) {

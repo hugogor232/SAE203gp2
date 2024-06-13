@@ -3,9 +3,10 @@
 <html lang="fr">
     <head>
 <?php
-    print_r($_SESSION);
+    //print_r($_SESSION);
     include("functions.php");
     genererHeader();
+    toggle();
     genererNavigation();
     ?>
         <meta charset="utf-8">
@@ -19,4 +20,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   
     </head>
+
+    <script>
+    document.getElementById('offcanvasToggle').addEventListener('click', function () {
+        var offcanvasElement = document.getElementById('offcanvasExample');
+        var offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+        offcanvas.show();
+    });
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </html>

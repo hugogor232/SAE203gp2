@@ -1,5 +1,5 @@
-[
-    {
+{
+    "0": {
         "id": 1,
         "nom": "",
         "droit": "public",
@@ -7,45 +7,29 @@
         "permission": [],
         "fichiers": []
     },
-    {
-        "id": 2,
-        "nom": "sae",
+    "2": {
+        "id": 3,
+        "nom": "sae2",
         "droit": "public",
-        "description": "test",
+        "description": "test2",
         "permission": [
             0
         ],
-        "fichiers": [
-            {
-                "nom": "Baccalauréat_général_Solaymane_ELKALDAOUI-1-1.pdf",
-                "date": "10\/06\/2024",
-                "auteur": "Rahmi"
-            },
-            {
-                "nom": "sae203_2324_td1_langages_dg-1.pdf",
-                "date": "10\/06\/2024",
-                "auteur": "Rahmi"
-            },
-            {
-                "nom": "sae203_2324_td3_serveurs_dg.pdf",
-                "date": "10\/06\/2024",
-                "auteur": "Rahmi"
-            },
-            {
-                "nom": "sae203_2324_cahierdescharges_fi1-1.pdf",
-                "date": "10\/06\/2024",
-                "auteur": "Rahmi"
-            },
-            {
-                "nom": "test1.txt",
-                "date": "10\/06\/2024",
-                "auteur": "Rahmi"
-            },
-            {
-                "nom": "TD2_R208_instanceof_Transtypage_Abstract_Interface_23_24.pdf",
-                "date": "10\/06\/2024",
-                "auteur": "Rahmi"
-            }
-        ]
+        "fichiers": []
+    },
+    "3": {
+        "id": 4,
+        "nom": "test3",
+        "droit": "public",
+        "description": "test3",
+        "permission": [
+            0,
+            11,
+            1,
+            2,
+            3,
+            19
+        ],
+        "fichiers": []
     }
-]
+}

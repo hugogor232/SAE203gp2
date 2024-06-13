@@ -6,14 +6,14 @@
 function genererHeader()
 {
     if (isset($_SESSION['email'])) {
-        $json_data = file_get_contents('../Vitrine/data/users.json');
+        $json_data = file_get_contents('/data/utilisateurs.json');
         $users = json_decode($json_data, true);
 
         if ($users !== null) {
-            $email = $_SESSION['email'];
+            $email = $_SESSION['idUtilisateur'];
             $currentUser = null;
             foreach ($users as $user) {
-                if ($user['email'] === $email) {
+                if ($user['email'] == $email) {
                     $currentUser = $user;
                     break;
                 }
