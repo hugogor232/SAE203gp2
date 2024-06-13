@@ -15,6 +15,7 @@
 <body>
 
     <?php
+<<<<<<<< HEAD:Vitrine/index.php
     session_start();
     include 'functions.php';
     error_reporting(0); // desactiver le rappport d erreur
@@ -24,6 +25,9 @@
         modifProfil();
     }
 
+========
+    include ('functions.php');
+>>>>>>>> main:SAE_203/index.php
     genererHeader();
     ?>
 

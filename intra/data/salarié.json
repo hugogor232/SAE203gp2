@@ -1,0 +1,156 @@
+[
+    {
+        "nom": "Jean Dupont",
+        "poste": "Directeur",
+        "email": "jean.dupont@vroumvroumloc.com",
+        "telephone": "+33612345678",
+        "photo": "images\/images_salari\u00e9s\/Face(17).jpeg"
+    },
+    {
+        "nom": "Marie Martin",
+        "poste": "Responsable des ventes",
+        "email": "marie.martin@vroumvroumloc.com",
+        "telephone": "+33623456789",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQxMDA5NS5qcGVn"
+    },
+    {
+        "nom": "Pierre Dubois",
+        "poste": "Responsable des achats",
+        "email": "pierre.dubois@vroumvroumloc.com",
+        "telephone": "+33734567890",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL21hbi9zZWVkMTE0NDcuanBlZw=="
+    },
+    {
+        "nom": "Sophie Lambert",
+        "poste": "Comptable",
+        "email": "sophie.lambert@vroumvroumloc.com",
+        "telephone": "+33645678901",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQxNjk1OC5qcGVn"
+    },
+    {
+        "nom": "Thomas Leroy",
+        "poste": "Technicien de maintenance",
+        "email": "thomas.leroy@vroumvroumloc.com",
+        "telephone": "+33756789012",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL21hbi9zZWVkMTc4MjkuanBlZw=="
+    },
+    {
+        "nom": "Isabelle Moreau",
+        "poste": "Assistante administrative",
+        "email": "isabelle.moreau@vroumvroumloc.com",
+        "telephone": "+33667890123",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQ3NzIzLmpwZWc="
+    },
+    {
+        "nom": "Nicolas Roux",
+        "poste": "Agent de service client",
+        "email": "nicolas.roux@vroumvroumloc.com",
+        "telephone": "+33778901234",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Anne Girard",
+        "poste": "Responsable marketing",
+        "email": "anne.girard@vroumvroumloc.com",
+        "telephone": "+33689012345",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQyMzM2MS5qcGVn"
+    },
+    {
+        "nom": "Lucie Lefevre",
+        "poste": "Responsable RH",
+        "email": "lucie.lefevre@vroumvroumloc.com",
+        "telephone": "+33790123456",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQxODg5LmpwZWc="
+    },
+    {
+        "nom": "Paul Durand",
+        "poste": "Commercial",
+        "email": "paul.durand@vroumvroumloc.com",
+        "telephone": "+33601234567",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Emilie Laurent",
+        "poste": "D\u00e9veloppeur web",
+        "email": "emilie.laurent@vroumvroumloc.com",
+        "telephone": "+33712345678",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQzODA4OC5qcGVn"
+    },
+    {
+        "nom": "Vincent Mercier",
+        "poste": "D\u00e9veloppeur logiciel",
+        "email": "vincent.mercier@vroumvroumloc.com",
+        "telephone": "+33623456789",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Caroline Rousseau",
+        "poste": "Designer graphique",
+        "email": "caroline.rousseau@vroumvroumloc.com",
+        "telephone": "+33734567890",
+        "photo": "https:\/\/thispersonnotexist.org\/downloadimage\/Ac3RhdGljL3dvbWFuL3NlZWQzNzM2LmpwZWc="
+    },
+    {
+        "nom": "Mathieu Blanc",
+        "poste": "Responsable qualit\u00e9",
+        "email": "mathieu.blanc@vroumvroumloc.com",
+        "telephone": "+33645678901",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Julie Lecomte",
+        "poste": "Agent de s\u00e9curit\u00e9",
+        "email": "julie.lecomte@vroumvroumloc.com",
+        "telephone": "+33756789012",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Antoine Giraud",
+        "poste": "Gestionnaire de stocks",
+        "email": "antoine.giraud@vroumvroumloc.com",
+        "telephone": "+33667890123",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Celine Royer",
+        "poste": "Responsable logistique",
+        "email": "celine.royer@vroumvroumloc.com",
+        "telephone": "+33778901234",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Sylvain Caron",
+        "poste": "Chauffeur livreur",
+        "email": "sylvain.caron@vroumvroumloc.com",
+        "telephone": "+33689012345",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Laurent Petit",
+        "poste": "Technicien informatique",
+        "email": "laurent.petit@vroumvroumloc.com",
+        "telephone": "+33790123456",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Alice Berger",
+        "poste": "Responsable des achats",
+        "email": "alice.berger@vroumvroumloc.com",
+        "telephone": "+33601234567",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Marc Gauthier",
+        "poste": "Chef de projet",
+        "email": "marc.gauthier@vroumvroumloc.com",
+        "telephone": "+33712345678",
+        "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Eric Salin",
+        "poste": "RH",
+        "email": "eric.salin@vroumvroumloc.com",
+        "telephone": "\"+33734567890\"",
+        "photo": "images\/images_salariés\/Face(14).jpeg"
+    }
+]
