@@ -300,7 +300,7 @@
                 <div class="col-md-3">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-user"></i> <strong>Rhami ATHOUMANI</strong></h5>
+                            <h5 class="card-title"><i class="fas fa-user"></i> <strong>Rahmi ATHOUMANI</strong></h5>
                             <p class="card-text"><strong><i>Responsable des partenariats.</i></strong> Il
                                 est
                                 chargé d'établir et de gérer des partenariats stratégiques avec d'autres entreprises
