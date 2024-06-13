@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             file_put_contents($jsonFilePath, json_encode($personnes, JSON_PRETTY_PRINT));
             var_dump($personnes);
             echo "Photo uploadée et mise à jour avec succès.";
-            header('Location: salarié.php');
+            ?><meta http-equiv="refresh" content="0;salarié.php" /> <?php
         } else {
             echo "Erreur lors du déplacement du fichier uploadé.";
         }

@@ -4,7 +4,7 @@
         "poste": "Directeur",
         "email": "jean.dupont@vroumvroumloc.com",
         "telephone": "+33612345678",
-        "photo": "images\/images_salari\u00e9s\/Face(15).jpeg"
+        "photo": "images\/images_salari\u00e9s\/Face(17).jpeg"
     },
     {
         "nom": "Marie Martin",
@@ -145,5 +145,12 @@
         "email": "marc.gauthier@vroumvroumloc.com",
         "telephone": "+33712345678",
         "photo": "https:\/\/via.placeholder.com\/100"
+    },
+    {
+        "nom": "Eric Salin",
+        "poste": "RH",
+        "email": "eric.salin@vroumvroumloc.com",
+        "telephone": "\"+33734567890\"",
+        "photo": "images\/images_salariés\/Face(14).jpeg"
     }
 ]
