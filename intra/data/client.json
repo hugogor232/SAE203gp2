@@ -1,230 +1,230 @@
 [
-      {
-        "nom": "Alice Martin",
-        "adresse": "12 Rue de l'Église, 75001 Paris, France",
-        "telephone": "+33 1 23 45 67 89",
-        "email": "alice.martin@example.com"
-      },
-      {
+    {
         "nom": "Bernard Dupont",
-        "adresse": "34 Avenue de la République, 75011 Paris, France",
+        "adresse": "34 Avenue de la R\u00e9publique, 75011 Paris, France",
         "telephone": "+33 1 98 76 54 32",
         "email": "bernard.dupont@example.com"
-      },
-      {
+    },
+    {
         "nom": "Catherine Leclerc",
         "adresse": "56 Boulevard Saint-Michel, 75005 Paris, France",
         "telephone": "+33 1 11 22 33 44",
         "email": "catherine.leclerc@example.com"
-      },
-      {
+    },
+    {
         "nom": "Daniel Garnier",
         "adresse": "78 Rue de Rivoli, 75004 Paris, France",
         "telephone": "+33 1 55 66 77 88",
         "email": "daniel.garnier@example.com"
-      },
-      {
-        "nom": "Émilie Petit",
+    },
+    {
+        "nom": "\u00c9milie Petit",
         "adresse": "90 Rue La Fayette, 75010 Paris, France",
         "telephone": "+33 1 23 34 45 56",
         "email": "emilie.petit@example.com"
-      },
-      {
-        "nom": "François Lefevre",
-        "adresse": "102 Avenue des Champs-Élysées, 75008 Paris, France",
+    },
+    {
+        "nom": "Fran\u00e7ois Lefevre",
+        "adresse": "102 Avenue des Champs-\u00c9lys\u00e9es, 75008 Paris, France",
         "telephone": "+33 1 44 55 66 77",
         "email": "francois.lefevre@example.com"
-      },
-      {
-        "nom": "Géraldine Durand",
+    },
+    {
+        "nom": "G\u00e9raldine Durand",
         "adresse": "114 Rue du Commerce, 75015 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "geraldine.durand@example.com"
-      },
-      {
-        "nom": "Hélène Moreau",
+    },
+    {
+        "nom": "H\u00e9l\u00e8ne Moreau",
         "adresse": "126 Rue de Vaugirard, 75006 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "helene.moreau@example.com"
-      },
-      {
+    },
+    {
         "nom": "Isabelle Marchand",
-        "adresse": "138 Rue du Faubourg Saint-Honoré, 75008 Paris, France",
+        "adresse": "138 Rue du Faubourg Saint-Honor\u00e9, 75008 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "isabelle.marchand@example.com"
-      },
-      {
+    },
+    {
         "nom": "Jacques Bernard",
         "adresse": "150 Boulevard Haussmann, 75009 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "jacques.bernard@example.com"
-      },
-      {
+    },
+    {
         "nom": "Karine Lefevre",
         "adresse": "162 Rue Saint-Dominique, 75007 Paris, France",
         "telephone": "+33 1 78 89 90 21",
         "email": "karine.lefevre@example.com"
-      },
-      {
+    },
+    {
         "nom": "Laurent Dupuis",
         "adresse": "174 Rue de la Pompe, 75016 Paris, France",
         "telephone": "+33 1 90 12 23 34",
         "email": "laurent.dupuis@example.com"
-      },
-      {
+    },
+    {
         "nom": "Marie Garnier",
         "adresse": "186 Boulevard de Clichy, 75018 Paris, France",
         "telephone": "+33 1 34 45 56 67",
         "email": "marie.garnier@example.com"
-      },
-      {
+    },
+    {
         "nom": "Nathalie Petit",
         "adresse": "198 Rue Saint-Antoine, 75004 Paris, France",
         "telephone": "+33 1 78 89 90 12",
         "email": "nathalie.petit@example.com"
-      },
-      {
+    },
+    {
         "nom": "Olivier Martin",
         "adresse": "210 Rue de la Victoire, 75009 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "olivier.martin@example.com"
-      },
-      {
+    },
+    {
         "nom": "Patricia Dupont",
-        "adresse": "222 Avenue de l'Opéra, 75002 Paris, France",
+        "adresse": "222 Avenue de l'Op\u00e9ra, 75002 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "patricia.dupont@example.com"
-      },
-      {
+    },
+    {
         "nom": "Quentin Leclerc",
         "adresse": "234 Rue de la Paix, 75002 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "quentin.leclerc@example.com"
-      },
-      {
+    },
+    {
         "nom": "Romain Garnier",
-        "adresse": "246 Rue Saint-Honoré, 75001 Paris, France",
+        "adresse": "246 Rue Saint-Honor\u00e9, 75001 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "romain.garnier@example.com"
-      },
-      {
+    },
+    {
         "nom": "Sophie Bernard",
         "adresse": "258 Avenue Montaigne, 75008 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "sophie.bernard@example.com"
-      },
-      {
+    },
+    {
         "nom": "Thomas Durand",
         "adresse": "270 Rue de Courcelles, 75017 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "thomas.durand@example.com"
-      },
-      {
+    },
+    {
         "nom": "Ursula Moreau",
         "adresse": "282 Rue du Faubourg Saint-Denis, 75010 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "ursula.moreau@example.com"
-      },
-      {
+    },
+    {
         "nom": "Vincent Lefevre",
-        "adresse": "294 Boulevard de Sébastopol, 75003 Paris, France",
+        "adresse": "294 Boulevard de S\u00e9bastopol, 75003 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "vincent.lefevre@example.com"
-      },
-      {
+    },
+    {
         "nom": "William Marchand",
         "adresse": "306 Rue de Belleville, 75020 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "william.marchand@example.com"
-      },
-      {
+    },
+    {
         "nom": "Xavier Bernard",
-        "adresse": "318 Rue de Ménilmontant, 75020 Paris, France",
+        "adresse": "318 Rue de M\u00e9nilmontant, 75020 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "xavier.bernard@example.com"
-      },
-      {
+    },
+    {
         "nom": "Yvonne Petit",
         "adresse": "330 Avenue de Versailles, 75016 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "yvonne.petit@example.com"
-      },
-      {
+    },
+    {
         "nom": "Zacharie Dupuis",
         "adresse": "342 Rue de Lourmel, 75015 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "zacharie.dupuis@example.com"
-      },
-      {
+    },
+    {
         "nom": "Amandine Martin",
         "adresse": "354 Rue Lecourbe, 75015 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "amandine.martin@example.com"
-      },
-      {
+    },
+    {
         "nom": "Bruno Dupont",
         "adresse": "366 Rue Blomet, 75015 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "bruno.dupont@example.com"
-      },
-      {
-        "nom": "Célia Leclerc",
+    },
+    {
+        "nom": "C\u00e9lia Leclerc",
         "adresse": "378 Rue de Vaugirard, 75015 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "celia.leclerc@example.com"
-      },
-      {
+    },
+    {
         "nom": "David Garnier",
         "adresse": "390 Boulevard Pasteur, 75015 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "david.garnier@example.com"
-      },
-      {
+    },
+    {
         "nom": "Elise Bernard",
         "adresse": "402 Rue de la Convention, 75015 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "elise.bernard@example.com"
-      },
-      {
+    },
+    {
         "nom": "Floriane Durand",
         "adresse": "414 Rue Saint-Charles, 75015 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "floriane.durand@example.com"
-      },
-      {
+    },
+    {
         "nom": "Gilles Moreau",
         "adresse": "426 Rue de Lourmel, 75015 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "gilles.moreau@example.com"
-      },
-      {
+    },
+    {
         "nom": "Hugo Lefevre",
         "adresse": "438 Rue du Commerce, 75015 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "hugo.lefevre@example.com"
-      },
-      {
-        "nom": "Inès Marchand",
+    },
+    {
+        "nom": "In\u00e8s Marchand",
         "adresse": "450 Rue de la Croix-Nivert, 75015 Paris, France",
         "telephone": "+33 1 45 67 89 01",
         "email": "ines.marchand@example.com"
-      },
-      {
+    },
+    {
         "nom": "Julien Bernard",
-        "adresse": "462 Rue de l'Abbé Groult, 75015 Paris, France",
+        "adresse": "462 Rue de l'Abb\u00e9 Groult, 75015 Paris, France",
         "telephone": "+33 1 34 56 78 90",
         "email": "julien.bernard@example.com"
-      },
-      {
-        "nom": "Kévin Petit",
+    },
+    {
+        "nom": "K\u00e9vin Petit",
         "adresse": "474 Rue de la Croix-Nivert, 75015 Paris, France",
         "telephone": "+33 1 22 33 44 55",
         "email": "kevin.petit@example.com"
-      },
-      {
+    },
+    {
         "nom": "Laura Dupuis",
         "adresse": "486 Rue Blomet, 75015 Paris, France",
         "telephone": "+33 1 67 89 90 12",
         "email": "laura.dupuis@example.com"
-      }
-    ]
+    },
+    {
+        "nom": "Jolie barak",
+        "adresse": "izufieuffieurf",
+        "email": "zefezugf@zeifuhuei.com",
+        "telephone": "ziuegizegf"
+    }
+]

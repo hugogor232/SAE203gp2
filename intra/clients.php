@@ -38,17 +38,24 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
 </head>
 <body>
     <?php genererNavigation(); ?>
+    <!-- Champ de recherche -->
+    <div class="mb-3">
+        <input type="text" class="form-control" id="searchInput" placeholder="Rechercher un salarié...">
+    </div>
+    <div id="employeeList">
+        <!-- Ici seront ajoutées les cards des salariés -->
+    </div>
     <h1 class="text-center">Clients</h1>
 <div class="container mt-5">
     <div class="row">
         <?php foreach ($clients as $index => $client) { ?>
             <div class="col-md-4 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
-                <div class="card-header">
+                <div class="card border border-5 border-dark rounded-4" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
+                <div class="card-header bg-dark text-light rounded-top-3">
                         <h5 class="card-title text-center m-0"><?=$client['nom']; ?></h5>
                     </div>
                     <div class="card-body">
-                        <img src="images/image_client/client.jpg" class="card-img-top" alt="<?php echo $client['nom']; ?>">
+                        <img src="images/image_client/client.jpg" class="card-img-top rounded-bottom-3" alt="<?php echo $client['nom']; ?>">
                     </div>
                 </div>
             </div>
@@ -132,9 +139,39 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
     </div>
 </div>
     </div>
-    <?php genererFooter(); ?>
+
 </div>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+        $('#search').keyup(function(){
+            $('#result').html('');
+            $('#state').val('');
+            var searchField = $('#search').val();
+            var expression = new RegExp(searchField, "i");
+            $.getJSON('../data/utilisateurs.json', function(data) {
+                $.each(data, function(key, value){
+                    if (value.prenom.search(expression) != -1 || value.nom.search(expression) != -1)
+                    {
+                        $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.prenom+' '+value.nom+'</li>');
+                    }
+                });
+            });
+        });
+
+        let selectedUsers = [];
+
+        $('#result').on('click', 'li', function() {
+            var click_text = $(this).text().split('|');
+            selectedUsers.push($.trim(click_text[0]));
+            $('#search').val(selectedUsers.join(', '));
+            $('#result').html('');
+        });
+    });
+    </script>
 </body>
 </html>

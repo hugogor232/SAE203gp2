@@ -19,6 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Enregistrer les modifications dans le fichier JSON
     file_put_contents($jsonFilePath, json_encode($clients , JSON_PRETTY_PRINT  ));
-    ?><meta http-equiv="refresh" content="0;client.php" /> <?php
+    ?><meta http-equiv="refresh" content="0;clients.php" /> <?php
 }
 ?>
