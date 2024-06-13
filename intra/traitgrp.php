@@ -1,11 +1,12 @@
 <?php 
 session_start();
 $lecturejson = json_decode(file_get_contents("./data/groupes.json", true));
-$userjson = json_decode(file_get_contents('../Vitrine/data/users.json', true));
+$userjson = json_decode(file_get_contents('data/utilisateurs.json', true));
 //print_r($_POST);
 //var_dump($_POST);
-//header('Location: groupes.php');
+header('Location: groupes.php');
 $_SESSION["grpid"] = ($lecturejson[sizeof($lecturejson)-1]->id);
+echo($_SESSION["grpid"]);
 
 echo("<br><br><br>");
 if (isset($_POST["search"])){

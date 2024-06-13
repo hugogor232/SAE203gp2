@@ -34,22 +34,52 @@
     },
     {
         "id": 5,
-        "nom": "etet",
-        "droit": "Priv\u00e9e",
-        "description": "tet",
+        "nom": "S",
+        "droit": "Personnel",
+        "description": "S",
         "permission": [
-            20
+            0
         ],
         "fichiers": []
     },
     {
         "id": 6,
-        "nom": "fichier lyucaas",
-        "droit": "Priv\u00e9e",
-        "description": "test",
+        "nom": "public",
+        "droit": "Public",
+        "description": "public",
         "permission": [
-            20,
-            21
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+        ],
+        "fichiers": []
+    },
+    {
+        "id": 7,
+        "nom": "priv\u00e9e",
+        "droit": "Priv\u00e9e",
+        "description": "priv\u00e9e",
+        "permission": [
+            0,
+            3
         ],
         "fichiers": []
     }
