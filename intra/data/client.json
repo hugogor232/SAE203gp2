@@ -1,5 +1,4 @@
-{
-    "clients": [
+[
       {
         "nom": "Alice Martin",
         "adresse": "12 Rue de l'Église, 75001 Paris, France",
@@ -229,4 +228,3 @@
         "email": "laura.dupuis@example.com"
       }
     ]
-  }

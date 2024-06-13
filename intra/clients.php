@@ -1,8 +1,8 @@
 <?php
 // Charger le fichier JSON
 include "functions.php";
-$json = file_get_contents('data/salarié.json');
-$personnes = json_decode($json, true);
+$json = file_get_contents('data/client.json');
+$clients = json_decode($json, true);
 $_SESSION['role'] = "admin";
 $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
 ?>
@@ -38,17 +38,17 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
 </head>
 <body>
     <?php genererNavigation(); ?>
-    <h1 class="text-center">Salariés</h1>
+    <h1 class="text-center">Clients</h1>
 <div class="container mt-5">
     <div class="row">
-        <?php foreach ($personnes as $index => $personne) { ?>
+        <?php foreach ($clients as $index => $client) { ?>
             <div class="col-md-4 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
-                    <div class="card-body">
-                        <img src="<?=$personne['photo']; ?>" class="card-img-top" alt="<?php echo $personne['nom']; ?>">
+                <div class="card-header">
+                        <h5 class="card-title text-center m-0"><?=$client['nom']; ?></h5>
                     </div>
-                    <div class="card-footer">
-                        <h5 class="card-title text-center m-0"><?=$personne['nom']; ?></h5>
+                    <div class="card-body">
+                        <img src="images/image_client/client.jpg" class="card-img-top" alt="<?php echo $client['nom']; ?>">
                     </div>
                 </div>
             </div>
@@ -58,32 +58,18 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalLabel<?php echo $index; ?>"><?php echo $personne['nom']; ?></h5>
+                            <h5 class="modal-title" id="modalLabel<?php echo $index; ?>"><?php echo $client['nom']; ?></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p><strong>Poste:</strong> <?php echo $personne['poste']; ?></p>
-                            <p><strong>Email:</strong> <?php echo $personne['email']; ?></p>
-                            <p><strong>Téléphone:</strong> <?php echo $personne['telephone']; ?></p>
-                            <?php 
-                                if ($_SESSION['role'] == "admin" or $_SESSION['role'] == "modo" or $personne['email'] == $_SESSION['email']){
-                            ?>
-                            <h2>Modifier la photo</h2>
-                            <form action="upload.php" method="post" enctype="multipart/form-data">
-                                <div class="mb-3">
-                                    <input type="hidden" class="form-control" id="repo" name="repo" value="images/images_salariés">
-                                    <input class="form-control" id="email" type="hidden" name="email" value="<?=$personne['email']?>">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="photo" class="form-label">Sélectionner une photo</label>
-                                    <input type="file" class="form-control" id="photo" name="photo" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Sauvegarder</button>
-                            </form>
-                                <?php }
+                            <p><strong>Nom:</strong> <?php echo $client['nom']; ?></p>
+                            <p><strong>Adresse:</strong> <?php echo $client['adresse']; ?></p>
+                            <p><strong>Téléphone:</strong> <?php echo $client['telephone']; ?></p>
+                            <p><strong>Mail:</strong> <?php echo $client['email']; ?></p>
+                                <?php
                                 if ($_SESSION['role'] == "admin" or $_SESSION['role'] == "modo"){?>
-                                    <form action="suppr_salarié.php" method="post">
-                                <input type="hidden" name="email" value="<?= $personne['email'] ?>">
+                                    <form action="suppr_client.php" method="post">
+                                <input type="hidden" name="email" value="<?= $client['email'] ?>">
                                 <button type="submit" class="btn btn-danger">Supprimer</button>
                             </form>
                         <?php
@@ -121,14 +107,10 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="addEmployeeForm" action="ajout_salarié.php" method="post" enctype="multipart/form-data">
+                    <form id="addEmployeeForm" action="ajout_client.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="nom" class="form-label">Nom</label>
                             <input type="text" class="form-control" id="nom" name="nom" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="poste" class="form-label">Poste</label>
-                            <input type="text" class="form-control" id="poste" name="poste" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
@@ -139,8 +121,8 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
                             <input type="tel" class="form-control" id="telephone" name="telephone" required>
                         </div>
                         <div class="mb-3">
-                            <label for="photo" class="form-label">Photo</label>
-                            <input type="file" class="form-control" id="photo" name="photo">
+                            <label for="adresse" class="form-label">Adresse</label>
+                            <input type="tel" class="form-control" id="adresse" name="adresse" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Ajouter</button>
                     </form>
