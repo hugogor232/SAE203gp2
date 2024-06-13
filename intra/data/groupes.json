@@ -82,5 +82,29 @@
             3
         ],
         "fichiers": []
+    },
+    {
+        "id": 8,
+        "nom": "",
+        "droit": null,
+        "description": "",
+        "permission": [],
+        "fichiers": []
+    },
+    {
+        "id": 9,
+        "nom": "tes",
+        "droit": "Priv\u00e9e",
+        "description": "test",
+        "permission": [],
+        "fichiers": []
+    },
+    {
+        "id": 10,
+        "nom": "tes",
+        "droit": null,
+        "description": "test",
+        "permission": [],
+        "fichiers": []
     }
 ]

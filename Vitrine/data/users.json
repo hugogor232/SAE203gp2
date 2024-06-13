@@ -242,6 +242,17 @@
         "role": "employe"
     },
     {
+        "id": 21,
+        "prenom": "Hugo",
+        "nom": "richard",
+        "password": "bonjour",
+        "adresse": "saint",
+        "email": "hugo@gmail.com",
+        "telephone": "06455",
+        "dob": "2005-06-16",
+        "role": "employe"
+    },
+    {
         "id": 24,
         "prenom": "User",
         "nom": "USER",
