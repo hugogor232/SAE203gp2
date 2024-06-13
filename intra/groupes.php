@@ -3,7 +3,14 @@
 <html lang="fr">
     <head>
 <?php
-    //print_r($_SESSION);
+    error_reporting(0); // desactiver le rappport d erreur
+    $tabusers = json_decode(file_get_contents("../Vitrine/data/users.json", true));
+    if ($_SESSION["idUtilisateur"] == null){
+      foreach($tabusers as $user){
+          if ($user->email == $_GET["email"]){
+            $_SESSION["idUtilisateur"] = $user->id;
+          }
+      }}
     include('functions.php');
     genererHeader();
     genererNavigation();
@@ -22,7 +29,6 @@
     </head>
     <body>
     	<?php
-        $_SESSION["idUtilisateur"]=0;
         $_SESSION["role"]="admin";
         echo '<div class="row">';
     		$grpjson = json_decode(file_get_contents("./data/groupes.json", true));
@@ -178,7 +184,7 @@
               foreach ($groupe->permission as $utilisateur){
                 $idUtilisateurs[] = $utilisateur;
               }
-              $utilisateurs = json_decode(file_get_contents("./data/utilisateurs.json", true));
+              $utilisateurs = json_decode(file_get_contents("../Vitrine/data/users.json", true));
               foreach ($idUtilisateurs as $utilisateur){
               ?>
               <tr>
@@ -213,7 +219,7 @@
                 foreach ($groupe->permission as $utilisateur){
                   $idUtilisateurs[] = $utilisateur;
                 }
-                $utilisateurs = json_decode(file_get_contents("./data/utilisateurs.json", true));
+                $utilisateurs = json_decode(file_get_contents("../Vitrine/data/users.json", true));
                 foreach ($idUtilisateurs as $utilisateur){
                 ?>
                 <tr>
@@ -265,7 +271,7 @@
             $('#state').val('');
             var searchField = $('#search').val();
             var expression = new RegExp(searchField, "i");
-            $.getJSON('data/utilisateurs.json', function(data) {
+            $.getJSON('../Vitrine/data/users.json', function(data) {
                 $.each(data, function(key, value){
                     if (value.prenom.search(expression) != -1 || value.nom.search(expression) != -1)
                     {

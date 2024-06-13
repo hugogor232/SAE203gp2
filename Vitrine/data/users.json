@@ -1,5 +1,6 @@
-{
-    "0": {
+[
+    {
+        "id": 0,
         "prenom": "Sophie",
         "nom": "Leclerc",
         "password": "Sophie123",
@@ -9,7 +10,8 @@
         "dob": "1985-02-14",
         "role": "utilisateur"
     },
-    "1": {
+    {
+        "id": 1,
         "prenom": "Thomas",
         "nom": "Dubois",
         "password": "Dubois789",
@@ -19,7 +21,8 @@
         "dob": "1992-03-18",
         "role": "utilisateur"
     },
-    "2": {
+    {
+        "id": 2,
         "prenom": "Marie",
         "nom": "Lefevre",
         "password": "MarieLef",
@@ -29,7 +32,8 @@
         "dob": "1980-11-03",
         "role": "utilisateur"
     },
-    "3": {
+    {
+        "id": 3,
         "prenom": "Philippe",
         "nom": "Rousseau",
         "password": "PhilRouss",
@@ -39,7 +43,8 @@
         "dob": "1976-04-22",
         "role": "utilisateur"
     },
-    "4": {
+    {
+        "id": 4,
         "prenom": "Julie",
         "nom": "Martin",
         "password": "JulieM123",
@@ -49,7 +54,8 @@
         "dob": "1991-09-09",
         "role": "utilisateur"
     },
-    "5": {
+    {
+        "id": 5,
         "prenom": "Antoine",
         "nom": "Dupont",
         "password": "Antoine456",
@@ -59,7 +65,8 @@
         "dob": "1988-08-07",
         "role": "utilisateur"
     },
-    "6": {
+    {
+        "id": 6,
         "prenom": "Val\u00e9rie",
         "nom": "Girard",
         "password": "ValGirard2",
@@ -69,7 +76,8 @@
         "dob": "1975-01-16",
         "role": "utilisateur"
     },
-    "7": {
+    {
+        "id": 7,
         "prenom": "Nicolas",
         "nom": "Bertrand",
         "password": "NicoBer",
@@ -79,7 +87,8 @@
         "dob": "1983-07-25",
         "role": "utilisateur"
     },
-    "8": {
+    {
+        "id": 8,
         "prenom": "Sandrine",
         "nom": "Leroy",
         "password": "Sandrine67",
@@ -89,7 +98,8 @@
         "dob": "1977-12-12",
         "role": "utilisateur"
     },
-    "9": {
+    {
+        "id": 9,
         "prenom": "Guillaume",
         "nom": "Moreau",
         "password": "GuiMore",
@@ -99,7 +109,8 @@
         "dob": "1981-05-30",
         "role": "utilisateur"
     },
-    "10": {
+    {
+        "id": 10,
         "prenom": "Caroline",
         "nom": "Fournier",
         "password": "Caro1234",
@@ -109,7 +120,8 @@
         "dob": "1984-10-08",
         "role": "utilisateur"
     },
-    "11": {
+    {
+        "id": 11,
         "prenom": "David",
         "nom": "Martinez",
         "password": "DavidMtz",
@@ -119,7 +131,8 @@
         "dob": "1974-02-20",
         "role": "utilisateur"
     },
-    "12": {
+    {
+        "id": 12,
         "prenom": "Christine",
         "nom": "Garcia",
         "password": "ChrisGarc",
@@ -129,7 +142,8 @@
         "dob": "1972-06-15",
         "role": "utilisateur"
     },
-    "13": {
+    {
+        "id": 13,
         "prenom": "Pierre",
         "nom": "Andr\u00e9",
         "password": "PierreA567",
@@ -139,7 +153,8 @@
         "dob": "1986-11-05",
         "role": "utilisateur"
     },
-    "14": {
+    {
+        "id": 14,
         "prenom": "Isabelle",
         "nom": "Gauthier",
         "password": "IsaGauth",
@@ -149,7 +164,8 @@
         "dob": "1978-04-10",
         "role": "utilisateur"
     },
-    "15": {
+    {
+        "id": 15,
         "prenom": "Marc",
         "nom": "Legrand",
         "password": "MarcLeg",
@@ -159,7 +175,8 @@
         "dob": "1980-03-25",
         "role": "utilisateur"
     },
-    "16": {
+    {
+        "id": 16,
         "prenom": "C\u00e9line",
         "nom": "Renaud",
         "password": "CelineR321",
@@ -169,7 +186,8 @@
         "dob": "1982-08-18",
         "role": "utilisateur"
     },
-    "17": {
+    {
+        "id": 17,
         "prenom": "Jean",
         "nom": "Jacques",
         "password": "JeanJ456",
@@ -179,7 +197,8 @@
         "dob": "1976-01-09",
         "role": "utilisateur"
     },
-    "18": {
+    {
+        "id": 18,
         "prenom": "Nathalie",
         "nom": "Mercier",
         "password": "NathMerc",
@@ -189,7 +208,8 @@
         "dob": "1979-09-14",
         "role": "utilisateur"
     },
-    "19": {
+    {
+        "id": 19,
         "prenom": "Haziz",
         "nom": "SHEHU",
         "password": "h",
@@ -199,7 +219,8 @@
         "dob": "1979-09-14",
         "role": "admin"
     },
-    "20": {
+    {
+        "id": 20,
         "prenom": "Clement",
         "nom": "LEROUX",
         "password": "bonjour",
@@ -209,7 +230,8 @@
         "dob": "1979-10-14",
         "role": "employe"
     },
-    "21": {
+    {
+        "id": 21,
         "prenom": "Lucas",
         "nom": "gilbert",
         "password": "bonjour",
@@ -219,7 +241,8 @@
         "dob": "2005-06-16",
         "role": "employe"
     },
-    "24": {
+    {
+        "id": 24,
         "prenom": "User",
         "nom": "USER",
         "password": "bonjour",
@@ -228,6 +251,27 @@
         "telephone": "04.56.78.90.14",
         "dob": "2001-01-01",
         "role": "utilisateur"
+    },
+    {
+        "id": 25,
+        "prenom": "tes",
+        "nom": "test",
+        "password": "teef",
+        "adresse": "fza",
+        "email": "ezf@gmez.caz",
+        "telephone": "zfa",
+        "dob": "5000-04-12",
+        "role": "utilisateur"
+    },
+    {
+        "id": 26,
+        "prenom": "tes",
+        "nom": "testte",
+        "password": "etet",
+        "adresse": "greez",
+        "email": "ge@zda.zf",
+        "telephone": "1201021",
+        "dob": "0212-05-12",
+        "role": "utilisateur"
     }
-    
-}
+]

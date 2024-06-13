@@ -6,7 +6,7 @@
 function genererHeader()
 {
     if (isset($_SESSION['email'])) {
-        $json_data = file_get_contents('/data/utilisateurs.json');
+        $json_data = file_get_contents('./data/utilisateurs.json');
         $users = json_decode($json_data, true);
 
         if ($users !== null) {
@@ -32,7 +32,7 @@ function genererHeader()
 function genererNavigation()
 {
     echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">';
-    echo '<a class="navbar-brand" href="groupes.php">';
+    echo '<a class="navbar-brand" href="../Vitrine/index.php">';
     echo '<img src="../Vitrine/images/logo1.jpeg" alt="Logo" width="50" height="50" style="border-radius: 50%;">';
 
     echo '</a>';

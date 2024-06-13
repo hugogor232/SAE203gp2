@@ -1,5 +1,5 @@
-{
-    "0": {
+[
+    {
         "id": 1,
         "nom": "",
         "droit": "public",
@@ -7,7 +7,7 @@
         "permission": [],
         "fichiers": []
     },
-    "2": {
+    {
         "id": 3,
         "nom": "sae2",
         "droit": "public",
@@ -17,7 +17,7 @@
         ],
         "fichiers": []
     },
-    "3": {
+    {
         "id": 4,
         "nom": "test3",
         "droit": "public",
@@ -31,5 +31,26 @@
             19
         ],
         "fichiers": []
+    },
+    {
+        "id": 5,
+        "nom": "etet",
+        "droit": "Priv\u00e9e",
+        "description": "tet",
+        "permission": [
+            20
+        ],
+        "fichiers": []
+    },
+    {
+        "id": 6,
+        "nom": "fichier lyucaas",
+        "droit": "Priv\u00e9e",
+        "description": "test",
+        "permission": [
+            20,
+            21
+        ],
+        "fichiers": []
     }
-}
+]

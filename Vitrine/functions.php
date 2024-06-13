@@ -205,7 +205,8 @@ function genererLogin()
 
             foreach ($users as $user) {
                 if ($user['email'] === $email_saisi && $user['password'] === $password_saisi) {
-
+                    echo($user['email']);
+                    echo($email_saisi);
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['role'] = $user['role'];
 
@@ -213,7 +214,7 @@ function genererLogin()
                         header('Location: administrer.php');
                     }
                     if ($_SESSION['role'] === 'employe') {
-                        header('Location: ../intra/index.php');
+                        header('Location: ../intra/groupes.php?email='.$_SESSION['email']);
                     } else {
                         header('Location: index.php');
                     }
@@ -303,8 +304,13 @@ function genererInscription()
                 }
             }
 
+        $lecturejson = json_decode(file_get_contents("./data/users.json", true));
+        $idperso = ($lecturejson[sizeof($lecturejson)-1]->id);
+        echo($idperso);
+        
             if (empty($error_message)) {
                 $new_user = array(
+                    'id' => $idperso+1,
                     'prenom' => $_POST['prenom'],
                     'nom' => $_POST['nom'],
                     'password' => $password,
