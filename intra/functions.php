@@ -45,6 +45,8 @@ function genererNavigation()
     
     echo "<div><p>Bienvenue sur l'intranet de <b>VroumVroumLoc</b> ".$_SESSION["email"]."</p></div>";
     echo '<a href="../Vitrine/logout.php" class="btn btn-light ml-5 me-3">Se déconnecter</a>';
+    echo '<a href="partenaire.php" class="btn btn-light ml-5 me-3">Partenaire</a>';
+    echo '<a href="salarié.php" class="btn btn-light ml-5 me-3">Salarié</a>';
 
     echo '</div>';
     echo '</nav>';
