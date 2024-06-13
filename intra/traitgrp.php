@@ -1,5 +1,5 @@
 <?php 
-session_start();
+session_start(); //trait php
 $lecturejson = json_decode(file_get_contents("./data/groupes.json", true));
 $userjson = json_decode(file_get_contents('data/utilisateurs.json', true));
 //print_r($_POST);

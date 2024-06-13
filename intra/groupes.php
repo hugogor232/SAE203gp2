@@ -1,4 +1,4 @@
-<?php session_start();  ?>
+<?php session_start();  ?> 
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -13,7 +13,7 @@
       }}
     include('functions.php');
     genererHeader();
-    genererNavigation();
+    genererNavigation();//groupes php
     ?>
     <title>Accueil Intranet</title>
         <meta charset="utf-8">
