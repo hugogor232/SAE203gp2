@@ -15,14 +15,19 @@
 <body>
 
     <?php
+<<<<<<<< HEAD:Vitrine/index.php
     session_start();
     include 'functions.php';
+    error_reporting(0); // desactiver le rappport d erreur
 
     // Appeler la fonction pour traiter les modifications de profil si le formulaire est soumis
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         modifProfil();
     }
 
+========
+    include ('functions.php');
+>>>>>>>> main:SAE_203/index.php
     genererHeader();
     ?>
 
@@ -38,7 +43,13 @@
                 <div class="col-md-8 text-center text-md-start">
                     <h1 class="display-1">Bienvenue chez Vroumvroumloc!</h1>
                     <p class="lead">Louez des véhicules pour tous vos déplacements.</p>
-                    <?php genererLogin(); ?>
+                    <?php genererLogin();
+                    if (isset($_SESSION['role'])){
+                        if ($_SESSION['role'] == "employe") {
+                            echo '<a href="../intra/groupes.php" class="btn btn-lg btn-primary rounded-pill">Acces a l\'intra</a>';
+                        }
+                    }
+                    ?>
                     <?php if (isset($_SESSION['email'])): ?>
                         <a href="mes_reservations.php" class="btn btn-lg btn-primary rounded-pill">Mes réservations</a>
                         <a href="proposer.php" class="btn btn-lg btn-primary rounded-pill">Réserver un véhicule</a>

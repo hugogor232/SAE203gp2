@@ -29,25 +29,24 @@
     </head>
     <body>
     	<?php
-        $_SESSION["role"]="admin";
+        $_SESSION["rolet"]="admin";
         echo '<div class="row">';
     		$grpjson = json_decode(file_get_contents("./data/groupes.json", true));
             foreach($grpjson as $grp) {
-
+              var_dump($grp->permission);
+              echo($_SESSION["idUtilisateur"]);
               if (in_array($_SESSION["idUtilisateur"],$grp->permission)){
                 echo '
                 <div class="col-sm-2 m-3 p-0 d-flex">
                 <div type=button onclick=redirectToPage("gestion_fichiers/index.php?idgrp='.$grp->id.'") class="card shadow p-3 mb-5 bg-body rounded" style="width: 15rem; height:15rem;">
-                  <div class="card-body d-flex  flex-column text-center">
-                    <h4 class="card-title fw-bold fs-6">'.$grp->nom.'</h4>
+                  <div class="card-body d-flex  flex-column text-center ">
+                    <h4 class="card-title fw-bold fs-6">'.$grp->nom.$grp->id.'</h4>
                     <p class="card-text">'.$grp->description.'</p><div class="mt-5">
                     <div class="d-flex">
                     <div onclick="handleButtonClick(event)" class="dropdown">
-                    <button  id="dropdownMenuButton" "type="button" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16"><path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/></svg></button>
-                    <ul class="dropdown-menu aria-labelledby="dropdownMenuButton">
-                      <li><a href="suprgrp.php?id='.$grp->id.'" onclick="return checkDelete()"  class="dropdown-item p-0 m-0 text-center text-danger">supprimer</a></li>
-                      <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal'.$grp->id.'" class="dropdown-item p-0 m-0 text-center"> information</a> </li>
-                    </ul>
+                    <a href="./suprgrp.php?id='.$grp->id.'"><button  id="dropdownMenuButton" "type="button" class="btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                  </svg></button></a>
                     </div>
                     </div>
                     </div>
@@ -59,9 +58,9 @@
               }
             
             }
-            if ($_SESSION["role"] == "admin" or  $_SESSION["role"] == "modo"){
-              echo '<div class="col-sm-2 m-3 p-0 d-flex" data-toggle="modal" data-target="#myModal">
-                <div type=button class="card shadow p-3 mb-5 bg-body rounded" style="width: 15rem; height:15rem;">
+            if ($_SESSION["rolet"] == "admin" or  $_SESSION["rolet"] == "modo"){
+              echo '<div class="col-sm-2 m-4  d-flex " data-toggle="modal" data-target="#myModal">
+                <div type=button class="card shadow p-3 mb-5 bg-body rounded bg-dark bg-gradient text-light" style="width: 100%; height:100%;">
                   <div class="card-body d-flex justify-content-center flex-column text-center">
                     <h4 class="card-title"><b>Nouveau<br>groupe</b></h4><br>
                     
@@ -169,7 +168,7 @@
         <div class="card-body">
           <h4>Membres du groupe</h4>
           <?php
-              if ($_SESSION['role'] == 'admin' or $_SESSION['role'] == 'modo'){
+              if ($_SESSION['rolet'] == 'admin' or $_SESSION['rolet'] == 'modo'){
           ?>
           <table class="table table-striped">
             <thead>

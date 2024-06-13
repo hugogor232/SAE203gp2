@@ -242,6 +242,17 @@
         "role": "employe"
     },
     {
+        "id": 22,
+        "prenom": "Hugo",
+        "nom": "Richard",
+        "password": "bonjour",
+        "adresse": "le grand",
+        "email": "hugo@gmail.com",
+        "telephone": "06455",
+        "dob": "2005-01-06",
+        "role": "employe"
+    },
+    {
         "id": 24,
         "prenom": "User",
         "nom": "USER",

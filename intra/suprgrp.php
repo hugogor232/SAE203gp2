@@ -33,7 +33,17 @@ if (deleteDirectory($directory)) {
         echo "Erreur lors de la suppression du dossier.";
 }
 
-unset($lecturejson[$_GET["id"]-1]);
+
+$i = 0;
+foreach($lecturejson as $grp){
+    
+    echo($i);
+    if ($grp->id ==$_GET["id"]){
+        unset($lecturejson[$i]);
+    }
+    $i = $i+1;
+}
+
 echo '<pre>';
 print_r($lecturejson);
 echo '</pre>';

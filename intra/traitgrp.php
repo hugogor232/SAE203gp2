@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $lecturejson = json_decode(file_get_contents("./data/groupes.json", true));
-$userjson = json_decode(file_get_contents('data/utilisateurs.json', true));
+$userjson = json_decode(file_get_contents('../Vitrine/data/users.json', true));
 //print_r($_POST);
 //var_dump($_POST);
 header('Location: groupes.php');
