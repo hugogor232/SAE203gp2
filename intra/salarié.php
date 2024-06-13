@@ -3,6 +3,8 @@
 include "functions.php";
 $json = file_get_contents('data/salarié.json');
 $personnes = json_decode($json, true);
+$_SESSION['role'] = "admin";
+$_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
 ?>
 
 <!DOCTYPE html>
@@ -69,6 +71,7 @@ $personnes = json_decode($json, true);
                             <h2>Modifier la photo</h2>
                             <form action="upload.php" method="post" enctype="multipart/form-data">
                                 <div class="mb-3">
+                                    <input type="hidden" class="form-control" id="repo" name="repo" value="images/images_salariés">
                                     <input class="form-control" id="email" type="hidden" name="email" value="<?=$personne['email']?>">
                                 </div>
                                 <div class="mb-3">
@@ -77,7 +80,15 @@ $personnes = json_decode($json, true);
                                 </div>
                                 <button type="submit" class="btn btn-primary">Sauvegarder</button>
                             </form>
-                                <?php } ?>
+                                <?php }
+                                if ($_SESSION['role'] == "admin" or $_SESSION['role'] == "modo"){?>
+                                    <form action="suppr_salarié.php" method="post">
+                                <input type="hidden" name="email" value="<?= $personne['email'] ?>">
+                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                            </form>
+                        <?php
+                                }
+                                ?>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -88,6 +99,8 @@ $personnes = json_decode($json, true);
         <?php } 
         if ($_SESSION['role'] == "admin" or $_SESSION['role'] == "modo"){
         ?>
+
+
         <!-- Card pour ajouter un nouveau salarié -->
     <div class="card mb-3 border border-0" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
         <div class="card-body text-center">

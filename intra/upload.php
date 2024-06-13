@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Vérifier si le fichier a été uploadé sans erreur
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == UPLOAD_ERR_OK) {
-        $uploadDir = 'images/images_salariés/'; // Répertoire où les fichiers seront stockés
+        $uploadDir = $_POST['repo']; // Répertoire où les fichiers seront stockés
 
 
         $fileTmpPath = $_FILES['photo']['tmp_name'];
