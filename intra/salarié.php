@@ -43,12 +43,12 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
     <div class="row">
         <?php foreach ($personnes as $index => $personne) { ?>
             <div class="col-md-4 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
-                    <div class="card-body">
-                        <img src="<?=$personne['photo']; ?>" class="card-img-top" alt="<?php echo $personne['nom']; ?>">
-                    </div>
-                    <div class="card-footer">
+                <div class="card border border-5 border-dark rounded-5" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
+                <div class="card-header bg-dark text-light rounded-top-4">
                         <h5 class="card-title text-center m-0"><?=$personne['nom']; ?></h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="<?=$personne['photo']; ?>" class="card-img-top rounded-bottom-5" alt="<?php echo $personne['nom']; ?>">
                     </div>
                 </div>
             </div>
@@ -150,6 +150,7 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
     </div>
 </div>
     </div>
+    <?php genererFooter(); ?>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

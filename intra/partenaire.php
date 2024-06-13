@@ -43,12 +43,12 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
     <div class="row">
         <?php foreach ($partenaires as $index => $partenaire) { ?>
             <div class="col-md-4 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
+                <div class="card border border-5 border-dark rounded-4" data-bs-toggle="modal" data-bs-target="#modal<?php echo $index; ?>">
+                <div class="card-header bg-dark text-light rounded-t-4">
+                        <h5 class="card-title text-center m-0"><?=$partenaire['nom']; ?></h5>
+                    </div>
                     <div class="card-body">
                         <img src="<?=$partenaire['photo']; ?>" class="card-img-top" alt="<?php echo $partenaire['nom']; ?>">
-                    </div>
-                    <div class="card-footer">
-                        <h5 class="card-title text-center m-0"><?=$partenaire['nom']; ?></h5>
                     </div>
                 </div>
             </div>
