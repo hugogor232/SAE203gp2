@@ -39,6 +39,9 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
 <body>
     <?php genererNavigation(); ?>
     <h1 class="text-center">Salariés</h1>
+    <form class= "d-flex" role="search">
+              <input id="searchBar" class="form-control me-2" type="text" onkeyup="showHint(this.value)" placeholder="Rechercher un fichier" aria-label="Search">
+    </form>
 <div class="container mt-5">
     <div class="row">
         <?php foreach ($personnes as $index => $personne) { ?>
@@ -151,5 +154,31 @@ $_SESSION['email'] = "jean.dupont@vroumvroumloc.com"
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+function showHint(str) {
+  if (str.length == 0) {
+    loadAllFiles();
+    return;
+  } else {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  xmlhttp.open("GET", "gethint.php?q=" + str);
+  xmlhttp.send();
+  }
+}
+
+
+/* function loadAllFiles() {
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.onload = function() {
+    document.getElementById("txtHint").innerHTML = this.responseText;
+  }
+  xmlhttp.open("GET", "ajoutTousLesFichiers.php", true); // Endpoint pour charger tous les fichiers
+  xmlhttp.send(); 
+}*/
+    </script>
 </body>
 </html>

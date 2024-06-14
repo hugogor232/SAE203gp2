@@ -48,6 +48,7 @@ function genererNavigation()
     echo '<a href="partenaire.php" class="btn btn-light ml-5 me-3">Partenaires</a>';
     echo '<a href="salarié.php" class="btn btn-light ml-5 me-3">Salariés</a>';
     echo '<a href="clients.php" class="btn btn-light ml-5 me-3">Clients</a>';
+    echo '<a href="groupes.php" class="btn btn-light ml-5 me-3">Espace de groupes</a>';
 
     echo '</div>';
     echo '</nav>';
